@@ -3,6 +3,6 @@ layout: home
 title: "Home"
 ---
 
-This theme allows an academic person to showcase their research interests, publications, research group, curriculum vitae, any courses that they may be teaching, or anything else they may want to put out into the world.
+Currently, I'm a Ph.D. student at the University of California, Berkeley. I am broadly interested in graph theory, problems in the foundations of probability theory, complex and stochastic systems, and applications of decision theory to medicine.
 
-Academics can use this home page to describe their research interests, display their latest publications, or provide an introduction to their research group.
+Before returning to school I worked as a  Consultant at Deloitte acting as a Scientific Data Analyst primarily for government clients.
