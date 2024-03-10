@@ -1,7 +1,8 @@
+---
 layout: page
 title: CV
 permalink: /cv/
-
+---
 # Chad Harper's CV
 
 ## Contact Information
