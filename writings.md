@@ -1,4 +1,4 @@
 ---
-layout: courses
+layout: writings
 title: "Courses"
 ---
