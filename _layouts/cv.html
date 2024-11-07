@@ -14,7 +14,15 @@ layout: default
     </div>
     <div class="col-md-10">
       {% for section in site.data.cv.education %}
-        <p><strong>{{ section.title }}</strong>, {{ section.institution }}, {{ section.date }}</p>
+        <p class="fw-bold">{{ section.title }}</p>
+        <p>
+          <em>{{ section.institution }}</em>
+          {% if section.location %} - {{ section.location }}{% endif %}
+          | {{ section.date }}
+        </p>
+        {% if section.description %}
+          <p>{{ section.description }}</p>
+        {% endif %}
       {% endfor %}
     </div>
   </div>
@@ -27,12 +35,19 @@ layout: default
     <div class="col-md-10">
       {% for section in site.data.cv.professional_work_experience %}
         <p class="fw-bold">{{ section.title }}</p>
-        <p>{{ section.description }}</p>
+        <p>
+          <em>{{ section.company }}</em>
+          {% if section.location %} - {{ section.location }}{% endif %}
+          | {{ section.date }}
+        </p>
+        {% if section.description %}
+          <p>{{ section.description }}</p>
+        {% endif %}
       {% endfor %}
     </div>
   </div>
   
-  <!-- Research Section -->
+  <!-- Research Experience Section -->
   <div class="row g-5 mb-5">
     <div class="col-md-2">
       <h4>Research Experience</h4>
@@ -40,7 +55,14 @@ layout: default
     <div class="col-md-10">
       {% for section in site.data.cv.research %}
         <p class="fw-bold">{{ section.title }}</p>
-        <p>{{ section.description }}</p>
+        <p>
+          <em>{{ section.institution }}</em>
+          {% if section.location %} - {{ section.location }}{% endif %}
+          | {{ section.date }}
+        </p>
+        {% if section.description %}
+          <p>{{ section.description }}</p>
+        {% endif %}
       {% endfor %}
     </div>
   </div>
@@ -53,7 +75,14 @@ layout: default
     <div class="col-md-10">
       {% for section in site.data.cv.teaching %}
         <p class="fw-bold">{{ section.title }}</p>
-        <p>{{ section.description }}</p>
+        <p>
+          <em>{{ section.institution }}</em>
+          {% if section.location %} - {{ section.location }}{% endif %}
+          | {{ section.date }}
+        </p>
+        {% if section.description %}
+          <p>{{ section.description }}</p>
+        {% endif %}
       {% endfor %}
     </div>
   </div>
@@ -77,7 +106,10 @@ layout: default
     </div>
     <div class="col-md-10">
       {% for presentation in site.data.cv.presentations %}
-        <p>{{ presentation.name }}</p>
+        <p class="fw-bold">{{ presentation.name }}</p>
+        {% if presentation.date %}
+          <p>{{ presentation.date }}</p>
+        {% endif %}
       {% endfor %}
     </div>
   </div>
