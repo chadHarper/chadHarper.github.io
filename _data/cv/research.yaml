@@ -1,8 +1,16 @@
-- title: Visiting Research Fellow
-  description: "Lawrence Berkeley National Lab Perlmutter group \u2013 Berkeley CA\
-    \ (Jun 2018 \u2013 Sep 2018)"
-- title: Summer Undergraduate Research Fellow (SURF)
-  description: "NASA Jet Propulsion Laboratory \u2013 Pasadena CA (Jun 2017 \u2013\
-    \ Aug 2017)"
-- title: Mentored Advanced Project
-  description: Grinnell College (Jan 2018 - May 2018)
+- title: "Visiting Research Fellow"
+  institution: "Lawrence Berkeley National Lab, Perlmutter Group"
+  location: "Berkeley, CA"
+  date: "Jun 2018 – Sep 2018"
+  description: |
+    - Developed models for testing modified gravity theories using peculiar velocities of type Ia supernovae.
+    - Implemented MCMC algorithms on NERSC’s Cori supercomputer for galaxy data analysis.
+    - Contributed to understanding the growth rate factor of large-scale structure using statistical techniques.
+
+- title: "Summer Undergraduate Research Fellow (SURF)"
+  institution: "NASA Jet Propulsion Laboratory"
+  location: "Pasadena, CA"
+  date: "Jun 2017 – Aug 2017"
+  description: |
+    - Modeled stress mechanisms on icy satellites and implemented enhancements to SatStressGUI.
+    - Conducted simulations to compare Europa’s surface structures with observational data.
