@@ -12,12 +12,12 @@ layout: default
     <div class="col-md-2">
       <h4>Education</h4>
     </div>
-    <div class="col-md-10">
-      {% for section in site.data.cv.education %}
-        <p class="fw-bold">{{ section.title }}</p>
-        <p>{{ section.description }}</p>
-      {% endfor %}
-    </div>
+    <div class="container">
+  <h3>Education</h3>
+  {% for section in site.data.cv.education %}
+    <p><strong>{{ section.title }}</strong>, {{ section.institution }}, {{ section.date }}</p>
+  {% endfor %}
+</div>
   </div>
   
   <!-- Professional Work Experience Section -->
