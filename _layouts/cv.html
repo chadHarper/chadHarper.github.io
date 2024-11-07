@@ -12,12 +12,11 @@ layout: default
     <div class="col-md-2">
       <h4>Education</h4>
     </div>
-    <div class="container">
-  <h3>Education</h3>
-  {% for section in site.data.cv.education %}
-    <p><strong>{{ section.title }}</strong>, {{ section.institution }}, {{ section.date }}</p>
-  {% endfor %}
-</div>
+    <div class="col-md-10">
+      {% for section in site.data.cv.education %}
+        <p><strong>{{ section.title }}</strong>, {{ section.institution }}, {{ section.date }}</p>
+      {% endfor %}
+    </div>
   </div>
   
   <!-- Professional Work Experience Section -->
@@ -26,7 +25,7 @@ layout: default
       <h4>Professional Work Experience</h4>
     </div>
     <div class="col-md-10">
-      {% for section in site.data.cv.professional-work-experience %}
+      {% for section in site.data.cv.professional_work_experience %}
         <p class="fw-bold">{{ section.title }}</p>
         <p>{{ section.description }}</p>
       {% endfor %}
@@ -36,7 +35,7 @@ layout: default
   <!-- Research Section -->
   <div class="row g-5 mb-5">
     <div class="col-md-2">
-      <h4>Research</h4>
+      <h4>Research Experience</h4>
     </div>
     <div class="col-md-10">
       {% for section in site.data.cv.research %}
@@ -46,17 +45,76 @@ layout: default
     </div>
   </div>
   
+  <!-- Teaching Experience Section -->
+  <div class="row g-5 mb-5">
+    <div class="col-md-2">
+      <h4>Teaching Experience</h4>
+    </div>
+    <div class="col-md-10">
+      {% for section in site.data.cv.teaching %}
+        <p class="fw-bold">{{ section.title }}</p>
+        <p>{{ section.description }}</p>
+      {% endfor %}
+    </div>
+  </div>
+
   <!-- Publications Section -->
   <div class="row g-5 mb-5">
     <div class="col-md-2">
       <h4>Publications</h4>
     </div>
     <div class="col-md-10">
-      {% for publication in site.data.cv.publications.index %}
+      {% for publication in site.data.cv.publications %}
         <p>{{ publication.name }}</p>
       {% endfor %}
     </div>
   </div>
   
-  <!-- Additional sections like Presentations, TA/Mentorship, Awards and Honors, Affiliated Organizations, and Computer Skills can be added following the same pattern -->
+  <!-- Presentations Section -->
+  <div class="row g-5 mb-5">
+    <div class="col-md-2">
+      <h4>Presentations</h4>
+    </div>
+    <div class="col-md-10">
+      {% for presentation in site.data.cv.presentations %}
+        <p>{{ presentation.name }}</p>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Awards and Honors Section -->
+  <div class="row g-5 mb-5">
+    <div class="col-md-2">
+      <h4>Awards and Honors</h4>
+    </div>
+    <div class="col-md-10">
+      {% for award in site.data.cv.awards %}
+        <p>{{ award.name }}</p>
+      {% endfor %}
+    </div>
+  </div>
+  
+  <!-- Affiliated Organizations Section -->
+  <div class="row g-5 mb-5">
+    <div class="col-md-2">
+      <h4>Affiliated Organizations</h4>
+    </div>
+    <div class="col-md-10">
+      {% for affiliation in site.data.cv.affiliations %}
+        <p>{{ affiliation.name }}</p>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Skills Section -->
+  <div class="row g-5 mb-5">
+    <div class="col-md-2">
+      <h4>Skills</h4>
+    </div>
+    <div class="col-md-10">
+      {% for skill in site.data.cv.skills %}
+        <p>{{ skill.name }}</p>
+      {% endfor %}
+    </div>
+  </div>
 </div>
