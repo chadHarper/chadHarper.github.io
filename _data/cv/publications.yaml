@@ -1,6 +1,10 @@
-- index:
-  - name: Kim A. Aldering G. Antilogus P., et al. 2019 BAAS 51 140 arXiv:1903.07652
-  - name: 'Using SatStressGUI to Calculate Tidal Stresses on Moons: Applications to
-      Europa- Conference Publication'
-  - name: "Modelling Stresses on Icy Satellites: Upgrading SatStressGUI \u2013 Conference\
-      \ Publication 214.08"
+- name: "Getting Our Priorities Straight: Donor-Recipient Compatibility and Distributive Justice"
+  status: "Submitted to American Journal of Bioethics"
+- name: "How to Apply Category Theory to Thermodynamics"
+  source: "The n-Category Café"
+- name: "Using SatStressGUI to Calculate Tidal Stresses on Moons: Applications to Europa"
+  type: "Conference Publication"
+- name: "Modelling Stresses on Icy Satellites: Upgrading SatStressGUI"
+  type: "Conference Publication 214.08"
+- name: "ON-OFF Neuromorphic ISING Machines using Fowler-Nordheim Annealers"
+  status: "Submitted to Nature Communications"
