@@ -3,29 +3,25 @@
   location: "Berkeley, CA"
   date: "Nov 2022 – Present"
   description: |
-    - Introduced NeuroSA, a neuromorphic architecture for optimization problems in QUBO and Ising models.
-    - Created metrics for assessing I/O complexity in biological neurons, with potential applications in neuromorphic engineering.
-    - Mentored two undergraduate researchers in data science methodologies and scientific communication.
+    Introduced NeuroSA, a neuromorphic architecture for optimization problems in QUBO and Ising models.
+    Created metrics for assessing I/O complexity in biological neurons, with potential applications in neuromorphic engineering.
+    Mentored two undergraduate researchers in data science methodologies and scientific communication.
 
 - title: "Researcher"
   company: "Stanford University, Currie Lab"
   location: "Stanford, CA"
   date: "May 2022 – Present"
   description: |
-    - Developed an Expected Opportunities System (EOS) for fair organ allocation, addressing ethical challenges in transplantation.
-    - Conducted comparative studies of existing systems, proposing improvements for equitable organ distribution.
-    - Investigated donor-recipient sex mismatching effects, leading to policy recommendations for improved patient outcomes.
+    Developed the Expected Opportunities System (EOS) for fair organ allocation, addressing ethical challenges in transplantation.
+    Conducted comparative studies of existing systems, proposing improvements for equitable organ distribution.
+    Investigated donor-recipient sex mismatching effects, leading to policy recommendations for improved patient outcomes.
     
-- title: "Scientific Data Analyst"
+- title: "Consultant"
   company: "Deloitte Consulting LLP"
   location: "Rosslyn, VA"
   date: "Sep 2018 – Jun 2021"
   description: |
-    - Led a team of five to perform data analysis for IRS change management across ten critical work streams.
-    - Designed and implemented a Neo4j-based graph representation of DHS data to evaluate national infrastructure risk.
-    - Developed a machine learning pipeline for the Ohio Department of Health to analyze and predict trends in the opioid epidemic.
-    - Applied natural language processing techniques to identify market opportunities for a close-hold search platform.
-
-
-
-
+    Led a team of five to perform data analysis for IRS change management across ten critical work streams.
+    Designed and implemented a Neo4j-based graph representation of DHS data to evaluate national infrastructure risk.
+    Developed a machine learning pipeline for the Ohio Department of Health to analyze and predict trends in the opioid epidemic.
+    Applied natural language processing techniques to identify market opportunities for a close-hold search platform.
