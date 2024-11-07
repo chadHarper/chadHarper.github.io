@@ -1,6 +1,6 @@
-- title: Ph.D. in Physics
-  description: University of California, Berkeley (Expected graduation in 2025)
-  
-- title: B.Sc. in Mathematics and Physics
-  description: Grinnell College (Graduated in 2018)
-
+- title: "Ph.D. in Physics"
+  institution: "University of California, Berkeley"
+  date: "Expected 2025"
+- title: "B.A. in Physics and Mathematics"
+  institution: "Grinnell College"
+  date: "May 2018"
