@@ -1,4 +1,0 @@
----
-layout: writings
-title: "Courses"
----
