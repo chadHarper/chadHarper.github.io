@@ -1,4 +1,11 @@
+# Site settings
 url: "http://chadHarper.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "CH" # the name of your site, e.g. ACME Corp.
-description: "Some web action. A little site situation." 
+description: "Some web action. A little site situation."
+
+# Collections
+collections:
+  writings:
+    output: true
+    permalink: /writings/:title
