@@ -4,6 +4,10 @@ baseurl: "" # the subpath of your site, e.g. /blog
 title: "CH" # the name of your site, e.g. ACME Corp.
 description: "Some web action. A little site situation."
 
+#Exclusions
+exclude:
+  - courses 
+
 # Collections
 collections:
   writings:
