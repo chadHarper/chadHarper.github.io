@@ -7,6 +7,8 @@ description: "Some web action. A little site situation."
 #Exclusions
 exclude:
   - courses 
+  - people
+  
 
 # Collections
 collections:
