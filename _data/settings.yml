@@ -1,25 +1,18 @@
 menu:
-#- {name: 'people', url: '/people'}
-#- {name: 'publications', url: '/publications'}
-- {name: 'writings', url: '/writings'}
-- {name: 'cv', url: '/cv'}
-- {name: 'contact', url: '/contact'}
+  - {name: 'writings', url: '/writings'}
+  - {name: 'cv', url: '/cv'}
+  - {name: 'contact', url: '/contact'}
 
-#people:
-#- {name: 'Primary Investigator', title: 'Researcher', department: 'Physics & Astronomy', institution: 'Some University', institution_address: '1 Main Street, Canada', phone: '(000) 000-0000', email: 'hello@university.edu', office: 'Science Building 505', image: 'assets/img/primary-investigator.jpg', url: 'primary-investigator'}
-#- {name: 'Lab Technician', title: 'Researcher', department: 'Physics & Astronomy', institution: 'Some University', institution_address: '1 Main Street, Canada', phone: '(000) 000-0000', email: 'hello@university.edu', office: 'Science Building 505', image: 'assets/img/lab-technician.jpg', url: 'lab-technician'}
-#- {name: 'Graduate Student', title: 'Researcher', department: 'Physics & Astronomy', institution: 'Some University', institution_address: '1 Main Street, Canada', phone: '(000) 000-0000', email: 'hello@university.edu', office: 'Science Building 505', image: 'assets/img/graduate-student.jpg', url: 'graduate-student'}
-
-writings:
-- {name: 'Vector Calculus', url: 'vector-calculus'}
-- {name: 'Quantum Mechanics', url: 'quantum-mechanics'}
-- {name: 'Stellar Structures', url: 'stellar-structures'}
+# Uncomment and update if you want to highlight specific writings
+# writings:
+# - {name: 'Vector Calculus', url: 'vector-calculus'}
+# - {name: 'Quantum Mechanics', url: 'quantum-mechanics'}
+# - {name: 'Stellar Structures', url: 'stellar-structures'}
 
 social:
-- {icon: 'github', link: 'https://github.com/chadHarper'}
-#- {icon: 'twitter', link: 'https://twitter.com/paululele'}
-#- {icon: 'instagram', link: 'https://instagram.com/paululele'}
-- {icon: 'linkedin', link: 'https://www.linkedin.com/in/chad-harper-91b785b9/'}
+  - {icon: 'github', link: 'https://github.com/chadHarper'}
+  - {icon: 'linkedin', link: 'https://www.linkedin.com/in/chad-harper-91b785b9/'}
 
-contacts:
-- {name: 'Dr. Academia', title: 'Professor', department: 'Physics & Astronomy', institution: 'Some University', institution_address: '1 Main Street, Canada', phone: '(000) 000-0000', email: 'hello@university.edu', office: 'Science Building 505', image: 'assets/img/contact.jpg'}
+# Uncomment if you want to use contacts on the contact page
+# contacts:
+# - {name: 'Your Name', title: 'Your Title', department: 'Your Department', institution: 'Your Institution', institution_address: 'Your Address', phone: 'Your Phone Number', email: 'Your Email', office: 'Your Office', image: 'path_to_image'}
