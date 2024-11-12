@@ -1,3 +1,12 @@
+---
+layout: post
+title: "Path Integral, Stochastic Differential Equations
+and Their Application to Neuroscience "
+category: "Technical Stuff"
+date: 2024-12-08
+excerpt: 
+---
+
 # Path Integrals, Stochastic Differential Equations, and Their Application to Neuroscience
 
 **Author:** Chad Harper  
