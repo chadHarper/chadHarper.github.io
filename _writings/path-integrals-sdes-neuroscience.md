@@ -39,8 +39,8 @@ $$
 
 where:
 
-- $P_i(t)$ is the probability of the system being in state $ i $ at time $t$.
-- $R_{j \to i}$ is the transition rate from state $ j $ to state $i$.
+- $P_i(t)$ is the probability of the system being in state $i$ at time $t$.
+- $R_{j \to i}$ is the transition rate from state $j$ to state $i$.
 
 This equation captures the balance of probability flow between different states: the first term represents the inflow to state $i$, while the second term represents the outflow from state $i$.
 
@@ -67,7 +67,7 @@ The CKdE describes the dynamics of a stochastic process over time. Here's an out
 
    $$
    \frac{\partial p(\mathbf{x}, t)}{\partial t} = \lim_{\Delta t \to 0} \frac{1}{\Delta t} \left[ p(\mathbf{x}, t+\Delta t) - p(\mathbf{x}, t) \right].
-  $$
+   $$
 
 3. **Use the Chapman-Kolmogorov Equation**:
 
@@ -80,31 +80,31 @@ The CKdE describes the dynamics of a stochastic process over time. Here's an out
    Split the integration over $\mathbf{z}$ into:
 
    - **Continuous part** ($\| \mathbf{x} - \mathbf{z} \| < \epsilon$): corresponds to small changes.
-   - **Jump part** ( $\| \mathbf{x} - \mathbf{z} \| \geq \epsilon$): corresponds to jumps or discontinuities.
+   - **Jump part** ($\| \mathbf{x} - \mathbf{z} \| \geq \epsilon$): corresponds to jumps or discontinuities.
 
    Denote these contributions as $R_1$ and $R_2$, respectively.
 
-5. **Expand the Continuous Part ($R_1$ )**:
+5. **Expand the Continuous Part ($R_1$)**:
 
-   Use a Taylor series expansion around $\mathbf{x}$ for small $\mathbf{r} = \mathbf{z} - \mathbf{x}$ :
+   Use a Taylor series expansion around $\mathbf{x}$ for small $\mathbf{r} = \mathbf{z} - \mathbf{x}$:
 
-  $$
+   $$
    R_1 \approx -\sum_i \frac{\partial}{\partial x_i} [A_i(\mathbf{x}, t) p(\mathbf{x}, t)] + \frac{1}{2} \sum_{i,j} \frac{\partial^2}{\partial x_i \partial x_j} [B_{ij}(\mathbf{x}, t) p(\mathbf{x}, t)],
    $$
 
-   where $A_i(\mathbf{x}, t) \) is the drift vector and \( B_{ij}(\mathbf{x}, t)$ is the diffusion matrix.
+   where $A_i(\mathbf{x}, t)$ is the drift vector and $B_{ij}(\mathbf{x}, t)$ is the diffusion matrix.
 
-6. **Handle the Jump Part ( $R_2$)**:
+6. **Handle the Jump Part ($R_2$)**:
 
-   For jumps, define the transition rate \( W(\mathbf{x} | \mathbf{z}, t) \).
+   For jumps, define the transition rate $W(\mathbf{x} | \mathbf{z}, t)$.
 
 7. **Combine Both Parts to Obtain the CKdE**:
 
-   \[
+   $$
    \frac{\partial p(\mathbf{x}, t)}{\partial t} = -\sum_i \frac{\partial}{\partial x_i} [A_i(\mathbf{x}, t) p(\mathbf{x}, t)] + \frac{1}{2} \sum_{i,j} \frac{\partial^2}{\partial x_i \partial x_j} [B_{ij}(\mathbf{x}, t) p(\mathbf{x}, t)] + \int_{\Omega} \left[ W(\mathbf{x} | \mathbf{z}, t) p(\mathbf{z}, t) - W(\mathbf{z} | \mathbf{x}, t) p(\mathbf{x}, t) \right] d\mathbf{z}.
-   \]
+   $$
 
-   This CKdE describes the time evolution of the probability density \( p(\mathbf{x}, t) \) for a stochastic process that includes both diffusion and jump processes.
+This CKdE describes the time evolution of the probability density $p(\mathbf{x}, t)$ for a stochastic process that includes both diffusion and jump processes.
 
 ---
 
@@ -120,3 +120,5 @@ We have presented a stochastic hybrid neural network model and demonstrated how 
 [^2]: Ullah, M., & Wolkenhauer, O. (2007). Family tree of Markov models in systems biology. *IET Systems Biology*, 1(4), 247–254.  
 [^3]: Bressloff, P. C., & Newby, J. M. (2013). Metastability in a stochastic neural network modeled as a velocity jump Markov process. *SIAM Journal on Applied Dynamical Systems*, 12(3), 1394–1435.  
 [^4]: Bressloff, P. C. (2015). Path-integral methods for analyzing the effects of fluctuations in stochastic hybrid neural networks. *Journal of Mathematical Neuroscience*, 5(1), 4.  
+
+---
