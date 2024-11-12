@@ -88,9 +88,9 @@ The CKdE describes the dynamics of a stochastic process over time. Here's an out
 
    Use a Taylor series expansion around $\mathbf{x}$ for small $\mathbf{r} = \mathbf{z} - \mathbf{x}$:
 
-   $$
+  $$
    R_1 \approx -\sum_i \frac{\partial}{\partial x_i} [A_i(\mathbf{x}, t) p(\mathbf{x}, t)] + \frac{1}{2} \sum_{i,j} \frac{\partial^2}{\partial x_i \partial x_j} [B_{ij}(\mathbf{x}, t) p(\mathbf{x}, t)],
-   $$
+  $$
 
    where $A_i(\mathbf{x}, t)$ is the drift vector and $B_{ij}(\mathbf{x}, t)$ is the diffusion matrix.
 
@@ -100,9 +100,9 @@ The CKdE describes the dynamics of a stochastic process over time. Here's an out
 
 7. **Combine Both Parts to Obtain the CKdE**:
 
-   $$
-   \frac{\partial p(\mathbf{x}, t)}{\partial t} = -\sum_i \frac{\partial}{\partial x_i} [A_i(\mathbf{x}, t) p(\mathbf{x}, t)] + \frac{1}{2} \sum_{i,j} \frac{\partial^2}{\partial x_i \partial x_j} [B_{ij}(\mathbf{x}, t) p(\mathbf{x}, t)] + \int_{\Omega} \left[ W(\mathbf{x} | \mathbf{z}, t) p(\mathbf{z}, t) - W(\mathbf{z} | \mathbf{x}, t) p(\mathbf{x}, t) \right] d\mathbf{z}.
-   $$
+$$
+\frac{\partial p(\mathbf{x}, t)}{\partial t} = -\sum_i \frac{\partial}{\partial x_i} [A_i(\mathbf{x}, t) p(\mathbf{x}, t)] + \frac{1}{2} \sum_{i,j} \frac{\partial^2}{\partial x_i \partial x_j} [B_{ij}(\mathbf{x}, t) p(\mathbf{x}, t)] + \int_{\Omega} \left[ W(\mathbf{x} | \mathbf{z}, t) p(\mathbf{z}, t) - W(\mathbf{z} | \mathbf{x}, t) p(\mathbf{x}, t) \right] d\mathbf{z}.
+$$
 
 This CKdE describes the time evolution of the probability density $p(\mathbf{x}, t)$ for a stochastic process that includes both diffusion and jump processes.
 
