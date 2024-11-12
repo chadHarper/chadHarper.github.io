@@ -2,7 +2,7 @@
 layout: post
 title: "Path Integral, Stochastic Differential Equations, and Their Application to Neuroscience"
 category: "Technical Stuff"
-date: 2024-12-08
+date: 2024-11-11
 excerpt: "Exploring path integrals and stochastic differential equations as powerful tools in neuroscience to understand the impact of intrinsic and extrinsic noise in neural systems."
 ---
 
