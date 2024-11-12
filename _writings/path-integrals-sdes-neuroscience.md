@@ -9,7 +9,7 @@ excerpt: "Exploring path integrals and stochastic differential equations as powe
 # Path Integrals, Stochastic Differential Equations, and Their Application to Neuroscience
 
 **Author:** Chad Harper  
-**Date:** May 2023
+
 
 ---
 
