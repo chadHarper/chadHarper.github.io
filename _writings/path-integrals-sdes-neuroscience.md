@@ -39,14 +39,14 @@ $$
 
 where:
 
-- $ P_i(t) $ is the probability of the system being in state $ i $ at time $ t $.
-- $ R_{j \to i} $ is the transition rate from state $ j $ to state $ i $.
+- $P_i(t)$ is the probability of the system being in state $ i $ at time $t$.
+- $R_{j \to i}$ is the transition rate from state $ j $ to state $i$.
 
-This equation captures the balance of probability flow between different states: the first term represents the inflow to state $ i $, while the second term represents the outflow from state $i $.
+This equation captures the balance of probability flow between different states: the first term represents the inflow to state $i$, while the second term represents the outflow from state $i$.
 
 To solve the master equation, one typically seeks:
 
-- **Stationary distributions** where $ \frac{dP_i(t)}{dt} = 0 $ for all $ i $.
+- **Stationary distributions** where $\frac{dP_i(t)}{dt} = 0$ for all $i$.
 - **Time-dependent solutions** to understand transient dynamics, using methods like matrix exponentiation, generating functions, or numerical simulations.
 
 Below, we describe the Differential Chapman-Kolmogorov equation (CKdE), which generalizes the master equation and encompasses the Fokker-Planck equation as a special case.
@@ -71,30 +71,30 @@ The CKdE describes the dynamics of a stochastic process over time. Here's an out
 
 3. **Use the Chapman-Kolmogorov Equation**:
 
-   \[
+   $$
    \frac{\partial p(\mathbf{x}, t)}{\partial t} = \lim_{\Delta t \to 0} \frac{1}{\Delta t} \int_{\Omega} \left[ p(\mathbf{x}, t+\Delta t | \mathbf{z}, t) p(\mathbf{z}, t) - p(\mathbf{z}, t+\Delta t | \mathbf{x}, t) p(\mathbf{x}, t) \right] d\mathbf{z}.
-   \]
+   $$
 
 4. **Divide the Integration Region**:
 
-   Split the integration over \( \mathbf{z} \) into:
+   Split the integration over $\mathbf{z}$ into:
 
-   - **Continuous part** (\( \| \mathbf{x} - \mathbf{z} \| < \epsilon \)): corresponds to small changes.
-   - **Jump part** (\( \| \mathbf{x} - \mathbf{z} \| \geq \epsilon \)): corresponds to jumps or discontinuities.
+   - **Continuous part** ($\| \mathbf{x} - \mathbf{z} \| < \epsilon$): corresponds to small changes.
+   - **Jump part** ( $\| \mathbf{x} - \mathbf{z} \| \geq \epsilon$): corresponds to jumps or discontinuities.
 
-   Denote these contributions as \( R_1 \) and \( R_2 \), respectively.
+   Denote these contributions as $R_1$ and $R_2$, respectively.
 
-5. **Expand the Continuous Part (\( R_1 \))**:
+5. **Expand the Continuous Part ($R_1$ )**:
 
-   Use a Taylor series expansion around \( \mathbf{x} \) for small \( \mathbf{r} = \mathbf{z} - \mathbf{x} \):
+   Use a Taylor series expansion around $\mathbf{x}$ for small $\mathbf{r} = \mathbf{z} - \mathbf{x}$ :
 
-   \[
+  $$
    R_1 \approx -\sum_i \frac{\partial}{\partial x_i} [A_i(\mathbf{x}, t) p(\mathbf{x}, t)] + \frac{1}{2} \sum_{i,j} \frac{\partial^2}{\partial x_i \partial x_j} [B_{ij}(\mathbf{x}, t) p(\mathbf{x}, t)],
-   \]
+   $$
 
-   where \( A_i(\mathbf{x}, t) \) is the drift vector and \( B_{ij}(\mathbf{x}, t) \) is the diffusion matrix.
+   where $A_i(\mathbf{x}, t) \) is the drift vector and \( B_{ij}(\mathbf{x}, t)$ is the diffusion matrix.
 
-6. **Handle the Jump Part (\( R_2 \))**:
+6. **Handle the Jump Part ( $R_2$)**:
 
    For jumps, define the transition rate \( W(\mathbf{x} | \mathbf{z}, t) \).
 
