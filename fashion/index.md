@@ -12,3 +12,5 @@ Hey there! I’m Chad Harper, stylist & critic.
 
 - [🖼 Photoshoots I Directed & Styled](/fashion/photoshoots/)  
 - [✍️ Fashion Criticism Blog](/fashion/criticism/)
+
+
