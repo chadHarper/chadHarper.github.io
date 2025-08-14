@@ -3,9 +3,11 @@ name: Build & Deploy Jekyll Site
 on:
   push:
     branches:
-      - master
       - main
-      - gh-pages
+      - master
+ 
+permissions:
+  contents: write 
 
 jobs:
   build-deploy:
