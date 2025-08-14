@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Path Integral, Stochastic Differential Equations, and Their Application to Neuroscience | CH</title>
+  <link rel="stylesheet" href="/assets/libs/bootstrap/bootstrap.min.css">
+  <script defer src="/assets/libs/fontawesome/all.min.js"></script>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-icon-152x152.png">
+  <link rel="shortcut icon" href="/assets/faviconOb.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+
+  <body>
+    <div class="col-lg-8 mx-auto p-3 py-md-5">
+      <header class="d-flex flex-column flex-md-row align-items-center pb-3 mb-5 border-bottom">
+  <div>
+    <a href="/" class="d-flex align-items-center text-decoration-none">
+      <p style="color:black;">
+        <span class="fs-3">CH</span>
+      </p>
+    </a>
+    <a href="/" class="d-flex align-items-center text-decoration-none">
+      <p style="color:black;">
+        <span>Some web action. A little site situation.</span>
+      </p>
+    </a>
+  </div>
+  <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+    
+      <a class="me-3 py-2 text-decoration-none" href="/writings">
+        <p style="color:black;">
+          <span class="fs-5">writings</span>
+        </p>
+      </a>
+    
+      <a class="me-3 py-2 text-decoration-none" href="/cv">
+        <p style="color:black;">
+          <span class="fs-5">cv</span>
+        </p>
+      </a>
+    
+  </nav>
+</header>
+
+      <div class="row g-5 mb-5">
+  <div class="col-md-12">
+    <h3 class="fw-bold border-bottom pb-3 mb-5">Path Integral, Stochastic Differential Equations, and Their Application to Neuroscience</h3>
+    <h1 id="path-integrals-stochastic-differential-equations-and-their-application-to-neuroscience">Path Integrals, Stochastic Differential Equations, and Their Application to Neuroscience</h1>
+
+<p><strong>Author:</strong> Chad Harper</p>
+
+<hr />
+
+<h2 id="introduction">Introduction</h2>
+
+<p>A central challenge in neuroscience is understanding the impact of noise, both from microscopic molecular and cellular levels to the macroscopic level of neuronal populations. Noisy systems can be modeled in one of two ways: by adding extrinsic noise terms to deterministic models or, alternatively, by assuming that noise arises intrinsically as a collective population effect. The latter case is described using stochastic dynamics in terms of a neural master equation <sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>. We will adopt the stochastic system approach in this paper.</p>
+
+<p>Though commonly associated with quantum mechanics, path integrals can be used to represent and analyze neuronal systems. In fact, any stochastic system can be expressed in terms of a path integral. This allows for the systematic application of asymptotic methods, greatly simplifying the analysis of complex systems.</p>
+
+<p>In this paper, we present a neural master equation for a stochastic hybrid neural network—a model designed to capture both the deterministic and stochastic aspects of neural dynamics. We then introduce the concept of path integrals and discuss their applications to stochastic differential equations (SDEs), providing a practical and insightful tool to analyze our neural system of interest.</p>
+
+<hr />
+
+<h2 id="stochastic-hybrid-network-model">Stochastic Hybrid Network Model</h2>
+
+<p>Noise in neural systems can be classified into two types: intrinsic and extrinsic. <strong>Extrinsic noise</strong>, arising from external environmental factors, is often modeled using continuous Markov processes based on Langevin equations. In contrast, <strong>intrinsic noise</strong> originates from random fluctuations due to the discrete nature of molecular-level chemical reactions. These fluctuations are particularly noticeable when the number of reacting molecules is small, necessitating a master equation approach for modeling <sup id="fnref:3"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>.</p>
+
+<p>In <sup id="fnref:4"><a href="#fn:4" class="footnote" rel="footnote" role="doc-noteref">3</a></sup>, network population dynamics were modeled as a stochastic hybrid system described by a “velocity” jump Markov process. We discuss this model below.</p>
+
+<h3 id="master-equations">Master Equations</h3>
+
+<p>A <strong>master equation</strong> describes the time evolution of the probability distribution over a set of discrete states in a stochastic system. A general form is:</p>
+
+\[\frac{dP_i(t)}{dt} = \sum_{j \neq i} \left[ R_{j \to i} P_j(t) - R_{i \to j} P_i(t) \right],\]
+
+<p>where:</p>
+
+<ul>
+  <li>$P_i(t)$ is the probability of the system being in state $i$ at time $t$.</li>
+  <li>$R_{j \to i}$ is the transition rate from state $j$ to state $i$.</li>
+</ul>
+
+<p>This equation captures the balance of probability flow between different states: the first term represents the inflow to state $i$, while the second term represents the outflow from state $i$.</p>
+
+<p>To solve the master equation, one typically seeks:</p>
+
+<ul>
+  <li><strong>Stationary distributions</strong> where $\frac{dP_i(t)}{dt} = 0$ for all $i$.</li>
+  <li><strong>Time-dependent solutions</strong> to understand transient dynamics, using methods like matrix exponentiation, generating functions, or numerical simulations.</li>
+</ul>
+
+<p>Below, we describe the Differential Chapman-Kolmogorov equation (CKdE), which generalizes the master equation and encompasses the Fokker-Planck equation as a special case.</p>
+
+<h3 id="differential-chapman-kolmogorov-equation-construction-outline">Differential Chapman-Kolmogorov Equation: Construction Outline</h3>
+
+<p>The CKdE describes the dynamics of a stochastic process over time. Here’s an outline of its construction:</p>
+
+<ol>
+  <li>
+    <p><strong>Start with the Chapman-Kolmogorov Equation</strong>:</p>
+
+    <table>
+      <tbody>
+        <tr>
+          <td>For a Markov process with transition probabilities $p(\mathbf{x}, t</td>
+          <td>\mathbf{x}_0, t_0)$:</td>
+        </tr>
+      </tbody>
+    </table>
+
+\[p(\mathbf{x}, t+\Delta t | \mathbf{x}_0, t_0) = \int_{\Omega} p(\mathbf{x}, t+\Delta t | \mathbf{z}, t) p(\mathbf{z}, t | \mathbf{x}_0, t_0) \, d\mathbf{z}.\]
+  </li>
+  <li>
+    <p><strong>Consider the Time Derivative of the Probability Density</strong>:</p>
+
+\[\frac{\partial p(\mathbf{x}, t)}{\partial t} = \lim_{\Delta t \to 0} \frac{1}{\Delta t} \left[ p(\mathbf{x}, t+\Delta t) - p(\mathbf{x}, t) \right].\]
+  </li>
+  <li>
+    <p><strong>Use the Chapman-Kolmogorov Equation</strong>:</p>
+
+\[\frac{\partial p(\mathbf{x}, t)}{\partial t} = \lim_{\Delta t \to 0} \frac{1}{\Delta t} \int_{\Omega} \left[ p(\mathbf{x}, t+\Delta t | \mathbf{z}, t) p(\mathbf{z}, t) - p(\mathbf{z}, t+\Delta t | \mathbf{x}, t) p(\mathbf{x}, t) \right] d\mathbf{z}.\]
+  </li>
+  <li>
+    <p><strong>Divide the Integration Region</strong>:</p>
+
+    <p>Split the integration over $\mathbf{z}$ into:</p>
+
+    <ul>
+      <li><strong>Continuous part</strong> ($| \mathbf{x} - \mathbf{z} | &lt; \epsilon$): corresponds to small changes.</li>
+      <li><strong>Jump part</strong> ($| \mathbf{x} - \mathbf{z} | \geq \epsilon$): corresponds to jumps or discontinuities.</li>
+    </ul>
+
+    <p>Denote these contributions as $R_1$ and $R_2$, respectively.</p>
+  </li>
+  <li>
+    <p><strong>Expand the Continuous Part ($R_1$)</strong>:</p>
+
+    <p>Use a Taylor series expansion around $\mathbf{x}$ for small $\mathbf{r} = \mathbf{z} - \mathbf{x}$:</p>
+  </li>
+</ol>
+
+\[R_1 \approx -\sum_i \frac{\partial}{\partial x_i} [A_i(\mathbf{x}, t) p(\mathbf{x}, t)] + \frac{1}{2} \sum_{i,j} \frac{\partial^2}{\partial x_i \partial x_j} [B_{ij}(\mathbf{x}, t) p(\mathbf{x}, t)],\]
+
+<p>where $A_i(\mathbf{x}, t)$ is the drift vector and $B_{ij}(\mathbf{x}, t)$ is the diffusion matrix.</p>
+
+<ol>
+  <li>
+    <p><strong>Handle the Jump Part ($R_2$)</strong>:</p>
+
+    <table>
+      <tbody>
+        <tr>
+          <td>For jumps, define the transition rate $W(\mathbf{x}</td>
+          <td>\mathbf{z}, t)$.</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <p><strong>Combine Both Parts to Obtain the CKdE</strong>:</p>
+  </li>
+</ol>
+
+\[\frac{\partial p(\mathbf{x}, t)}{\partial t} = -\sum_i \frac{\partial}{\partial x_i} [A_i(\mathbf{x}, t) p(\mathbf{x}, t)] + \frac{1}{2} \sum_{i,j} \frac{\partial^2}{\partial x_i \partial x_j} [B_{ij}(\mathbf{x}, t) p(\mathbf{x}, t)] + \int_{\Omega} \left[ W(\mathbf{x} | \mathbf{z}, t) p(\mathbf{z}, t) - W(\mathbf{z} | \mathbf{x}, t) p(\mathbf{x}, t) \right] d\mathbf{z}.\]
+
+<p>This CKdE describes the time evolution of the probability density $p(\mathbf{x}, t)$ for a stochastic process that includes both diffusion and jump processes.</p>
+
+<hr />
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>We have presented a stochastic hybrid neural network model and demonstrated how path integrals can be used to analyze such systems. By expressing the stochastic dynamics in terms of a path integral, we can leverage powerful mathematical tools to study complex neural processes, including the effects of intrinsic noise at the population level.</p>
+
+<hr />
+
+<h2 id="references">References</h2>
+
+<hr />
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Buice, M. A., &amp; Cowan, J. D. (2007). Field-theoretic approach to fluctuation effects in neural networks. <em>Physical Review E</em>, 75(5), 051919. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>Bressloff, P. C., &amp; Newby, J. M. (2013). Metastability in a stochastic neural network modeled as a velocity jump Markov process. <em>SIAM Journal on Applied Dynamical Systems</em>, 12(3), 1394–1435. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>Bressloff, P. C. (2015). Path-integral methods for analyzing the effects of fluctuations in stochastic hybrid neural networks. <em>Journal of Mathematical Neuroscience</em>, 5(1), 4. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+  </div>
+</div>
+
+      <footer class="pt-5 my-5 text-muted border-top">
+  <div class="row">
+    <div class="col-md-6 text-end social-media-icons">
+      
+        <a href="https://github.com/chadHarper" class="ms-3 fs-5"><i class="fab fa-github"></i></a>
+      
+        <a href="https://www.linkedin.com/in/chad-harper-91b785b9/" class="ms-3 fs-5"><i class="fab fa-linkedin"></i></a>
+      
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+</html>

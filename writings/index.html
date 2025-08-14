@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Writings | CH</title>
+  <link rel="stylesheet" href="/assets/libs/bootstrap/bootstrap.min.css">
+  <script defer src="/assets/libs/fontawesome/all.min.js"></script>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-icon-152x152.png">
+  <link rel="shortcut icon" href="/assets/faviconOb.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+
+  <body>
+    <div class="col-lg-8 mx-auto p-3 py-md-5">
+      <header class="d-flex flex-column flex-md-row align-items-center pb-3 mb-5 border-bottom">
+  <div>
+    <a href="/" class="d-flex align-items-center text-decoration-none">
+      <p style="color:black;">
+        <span class="fs-3">CH</span>
+      </p>
+    </a>
+    <a href="/" class="d-flex align-items-center text-decoration-none">
+      <p style="color:black;">
+        <span>Some web action. A little site situation.</span>
+      </p>
+    </a>
+  </div>
+  <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+    
+      <a class="me-3 py-2 text-decoration-none" href="/writings">
+        <p style="color:black;">
+          <span class="fs-5">writings</span>
+        </p>
+      </a>
+    
+      <a class="me-3 py-2 text-decoration-none" href="/cv">
+        <p style="color:black;">
+          <span class="fs-5">cv</span>
+        </p>
+      </a>
+    
+  </nav>
+</header>
+
+      
+
+
+<div class="container">
+  <h2 class="fw-bold border-bottom pb-3 mb-5">Writings</h2>
+
+  <!-- Category Tabs -->
+  <div class="tabs">
+    <button class="tab all" onclick="filterPosts('all')">All</button>
+    <button class="tab technical" onclick="filterPosts('Technical Stuff')">Technical Stuff</button>
+    <button class="tab ethical" onclick="filterPosts('Ethical Stuff')">Ethical Stuff</button>
+    <button class="tab random" onclick="filterPosts('Random Thoughts')">Random Thoughts</button>
+  </div>
+
+  <!-- Writings Summaries -->
+  <div class="posts">
+    
+      <div class="post-card" data-category="Ethical Stuff">
+        <h3><a href="/writings/ethical-introduction">Introduction to Applied Analytical Ethics</a></h3>
+        <p>Exploring ethical frameworks and analytical approaches to address pressing issues in fair algorithms and medical ethics, particularly in biomedical policy and decision-making.</p>
+        <p class="post-date">November 08, 2024</p>
+        <p class="post-icon" style="color: #f0ebf5;">^_^</p>
+      </div>
+    
+      <div class="post-card" data-category="Random Thoughts">
+        <h3><a href="/writings/random-thoughts-introduction">Introduction to Random Thoughts</a></h3>
+        <p>A space for musings on topics that cross my mind—from the philosophical to the everyday reflections, all loosely connected to my work and interests.</p>
+        <p class="post-date">November 08, 2024</p>
+        <p class="post-icon" style="color: #ced7ed;">^_^</p>
+      </div>
+    
+      <div class="post-card" data-category="Technical Stuff">
+        <h3><a href="/writings/technical-introduction">Introduction to Technical Explorations</a></h3>
+        <p>Diving into the complexities of network dynamics, neuromorphic engineering, and computational neuroscience, this category will explore technical topics that drive modern science and technology.</p>
+        <p class="post-date">November 08, 2024</p>
+        <p class="post-icon" style="color: #dcfccc;">^_^</p>
+      </div>
+    
+      <div class="post-card" data-category="Technical Stuff">
+        <h3><a href="/writings/path-integrals-sdes-neuroscience">Path Integral, Stochastic Differential Equations, and Their Application to Neuroscience</a></h3>
+        <p>Exploring path integrals and stochastic differential equations as powerful tools in neuroscience to understand the impact of intrinsic and extrinsic noise in neural systems.</p>
+        <p class="post-date">November 11, 2024</p>
+        <p class="post-icon" style="color: #dcfccc;">^_^</p>
+      </div>
+    
+  </div>
+</div>
+
+<!-- JavaScript for Tab Filtering -->
+<script>
+  function filterPosts(category) {
+    var posts = document.querySelectorAll('.post-card');
+    posts.forEach(function(post) {
+      post.style.display = (category === 'all' || post.getAttribute('data-category') === category) ? 'block' : 'none';
+    });
+  }
+</script>
+
+      <footer class="pt-5 my-5 text-muted border-top">
+  <div class="row">
+    <div class="col-md-6 text-end social-media-icons">
+      
+        <a href="https://github.com/chadHarper" class="ms-3 fs-5"><i class="fab fa-github"></i></a>
+      
+        <a href="https://www.linkedin.com/in/chad-harper-91b785b9/" class="ms-3 fs-5"><i class="fab fa-linkedin"></i></a>
+      
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+</html>

@@ -1,8 +1,1 @@
----
-layout: writings
-title: "Writings"
-permalink: /writings/
----
-
-
-
+# Placeholder
