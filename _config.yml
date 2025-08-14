@@ -15,3 +15,17 @@ collections:
   writings:
     output: true
     permalink: /writings/:title
+
+plugins:
+  - jekyll-paginate-v2
+
+collections:
+  fashion_criticism:
+    output: true
+    permalink: /fashion/criticism/:name/
+
+pagination:
+  enabled: true
+  collection: fashion_criticism
+  per_page: 5
+  permalink: '/fashion/criticism/page:num/'
