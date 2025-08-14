@@ -9,21 +9,20 @@ exclude:
   - courses 
   - people
   
-
 # Collections
 collections:
   writings:
     output: true
     permalink: /writings/:title
-
-plugins:
-  - jekyll-paginate-v2
-
-collections:
   fashion_criticism:
     output: true
     permalink: /fashion/criticism/:name/
 
+# Plugins
+plugins:
+  - jekyll-paginate-v2
+
+# Pagination settings
 pagination:
   enabled: true
   collection: fashion_criticism
