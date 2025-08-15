@@ -97,6 +97,24 @@ body {
   line-height: 1.6;
 }
 
+.home-chooser .chooser-card {
+  display: block;
+  text-decoration: none;
+  border: 2px solid var(--brand-forest);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  color: var(--brand-forest);
+  font-family: var(--mono-stack);
+  background: #fff;
+}
+
+.home-chooser .chooser-card:hover,
+.home-chooser .chooser-card:focus {
+  background: var(--brand-forest);
+  color: var(--brand-cream);
+  outline: none;
+}
+
 /* Criticism section (palette + layout) */
 .crit-header {
   background-color: var(--brand-cream);
