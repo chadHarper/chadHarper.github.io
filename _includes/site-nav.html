@@ -1,9 +1,21 @@
-<nav class="site-nav">
+<nav class="site-nav" role="navigation" aria-label="Primary">
   <a href="/">Home</a>
-  <a href="/science/">Science</a>
-  <a href="/cv/">CV</a>
-  <a href="/writings/">Writings</a>
-  <a href="/fashion/">Fashion</a>
-  <a href="/fashion/photoshoots/">Photoshoots</a>
-  <a href="/fashion/criticism/">Criticism</a>
+
+  <div class="dropdown" tabindex="0" aria-haspopup="true">
+    <button class="dropbtn" aria-expanded="false">Science ▾</button>
+    <div class="dropdown-content" role="menu">
+      <a role="menuitem" href="/science/">Overview</a>
+      <a role="menuitem" href="/cv/">CV</a>
+      <a role="menuitem" href="/writings/">Writings</a>
+    </div>
+  </div>
+
+  <div class="dropdown" tabindex="0" aria-haspopup="true">
+    <button class="dropbtn" aria-expanded="false">Fashion ▾</button>
+    <div class="dropdown-content" role="menu">
+      <a role="menuitem" href="/fashion/">Overview</a>
+      <a role="menuitem" href="/fashion/photoshoots/">Photoshoots</a>
+      <a role="menuitem" href="/fashion/criticism/">Criticism</a>
+    </div>
+  </div>
 </nav>
