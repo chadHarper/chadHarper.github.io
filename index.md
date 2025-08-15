@@ -10,10 +10,3 @@ Before returning to school I worked as a  Consultant at Deloitte acting as a Sci
 
 
 
-**What brings you here?**
-
-- [Explore my academic work](/science/)  
-- [See my fashion projects & blog](/fashion/)
-
-
-
