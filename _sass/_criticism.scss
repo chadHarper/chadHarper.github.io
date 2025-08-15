@@ -1,0 +1,76 @@
+/* Criticism section (palette + layout) */
+.crit-header {
+  background-color: var(--brand-cream);
+  color: var(--brand-forest);
+  padding: 2rem;
+  font-family: var(--mono-stack);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.crit-filter {
+  margin: 1rem 0 1.5rem;
+}
+.crit-filter button {
+  background: transparent;
+  border: 2px solid var(--brand-forest);
+  color: var(--brand-forest);
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  font-family: var(--mono-stack);
+  border-radius: 8px;
+}
+.crit-filter button:hover,
+.crit-filter button:focus {
+  outline: none;
+  background: var(--brand-forest);
+  color: var(--brand-cream);
+}
+
+.crit-posts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.crit-posts li {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+.crit-posts h2 {
+  margin: 0 0 0.25rem 0;
+  font-family: var(--mono-stack);
+  letter-spacing: 0.2px;
+}
+.crit-posts .meta {
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+  margin-bottom: 0.5rem;
+}
+.crit-posts .summary {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+  font-family: var(--mono-stack);
+}
+.pagination a {
+  text-decoration: none;
+  border: 2px solid var(--brand-forest);
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  color: var(--brand-forest);
+}
+.pagination a:hover,
+.pagination a:focus {
+  background: var(--brand-forest);
+  color: var(--brand-cream);
+}
