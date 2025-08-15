@@ -8,7 +8,7 @@ permalink: /fashion/
 
 Hey ^_^ 
 
-**Do you want: **
+**Do you want:**
 
 - [✍️ Fashion Criticism Blog](/fashion/criticism/)
 
