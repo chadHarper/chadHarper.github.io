@@ -1,3 +1,7 @@
+---
+# The front matter fence is required so Jekyll processes this file.
+---
+
 /* General styles for the writings page */
 
 .tabs {
@@ -73,3 +77,6 @@
   color: #333;
   margin-bottom: 20px;
 }
+
+@import "palette";
+@import "criticism";
