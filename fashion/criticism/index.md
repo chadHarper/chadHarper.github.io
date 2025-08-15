@@ -55,15 +55,4 @@ permalink: /fashion/criticism/
   {% endif %}
 </nav>
 
-<script>
-// Simple JS filter logic
-document.querySelectorAll('.crit-filter button').forEach(btn=>{
-  btn.onclick = ()=>{
-    const filter = btn.getAttribute('data-filter');
-    document.querySelectorAll('.crit-posts li').forEach(li=>{
-      li.style.display = (filter==='all' || li.dataset.tags.includes(filter)) 
-                        ? '' : 'none';
-    });
-  };
-});
-</script>
+{% include criticism-filter.js %}
