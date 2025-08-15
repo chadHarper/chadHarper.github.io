@@ -6,11 +6,14 @@ permalink: /fashion/
 
 # Welcome to the Fashion Section
 
-Hey there! I’m Chad Harper, stylist & critic.
+Hey ^_^ 
 
-**Please choose:**
+**Do you want: **
 
-- [🖼 Photoshoots I Directed & Styled](/fashion/photoshoots/)  
 - [✍️ Fashion Criticism Blog](/fashion/criticism/)
+
+- <a href="https://www.chad-harper.com/home/styling-by-harper" target="_blank" rel="noopener">🖼 Photoshoots I Directed & Styled</a>
+   
+
 
 
