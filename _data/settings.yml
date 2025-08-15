@@ -1,6 +1,6 @@
-menu:
-  - {name: 'writings', url: '/writings'}
-  - {name: 'cv', url: '/cv'}
+#menu:
+ # - {name: 'writings', url: '/writings'}
+  #- {name: 'cv', url: '/cv'}
  # - {name: 'contact', url: '/contact'}
 
 # Uncomment and update if you want to highlight specific writings
