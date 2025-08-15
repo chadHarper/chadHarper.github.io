@@ -5,46 +5,7 @@ permalink: /fashion/criticism/
 # We’ll handle pagination in a moment…
 ---
 
-<style>
-/* Temporary in‑page CSS to illustrate the palette & font; we’ll move this into your SCSS later */
-.crit-header {
-  background-color: #F5F2E7;      /* Cream */
-  color: #2E4E1E;                 /* Forest green */
-  padding: 2rem;
-  font-family: 'Courier New', Courier, monospace;
-}
-.crit-filter button {
-  background: none;
-  border: 2px solid #2E4E1E;
-  color: #2E4E1E;
-  padding: 0.5rem 1rem;
-  margin-right: 0.5rem;
-  cursor: pointer;
-  font-family: 'Courier New', Courier, monospace;
-}
-.crit-posts {
-  list-style: none;
-  padding: 0;
-}
-.crit-posts li {
-  margin-bottom: 2rem;
-  border-bottom: 1px solid #DDD;
-  padding-bottom: 1rem;
-}
-.crit-posts h2 {
-  margin: 0;
-}
-.crit-posts .meta {
-  font-size: 0.9rem;
-  color: #555;
-  margin-bottom: 0.5rem;
-}
-.crit-posts .summary {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #333;
-}
-</style>
+
 
 <div class="crit-header">
   <h1>Fashion Criticism</h1>
