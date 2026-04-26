@@ -1,0 +1,19 @@
+<div
+  class="filter-bar"
+  role="group"
+  aria-label="{{ include.aria_label | default: 'Filter posts' }}"
+  data-filter-group
+  data-filter-attribute="{{ include.attribute }}"
+>
+  {% for filter in include.filters %}
+    <button
+      class="filter-btn{% if forloop.first %} is-active{% endif %}"
+      type="button"
+      data-filter="{{ filter.value }}"
+      aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}"
+    >
+      {{ filter.label }}
+    </button>
+  {% endfor %}
+</div>
+

@@ -1,0 +1,83 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $bg-primary;
+  color: $text-primary;
+  font-family: $font-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  min-height: 100vh;
+  position: relative;
+  text-rendering: optimizeLegibility;
+}
+
+@media (min-width: $bp-tablet) {
+  body::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+    content: "";
+    inset: 0;
+    opacity: 0.17;
+    pointer-events: none;
+    position: fixed;
+    z-index: -1;
+  }
+}
+
+body.nav-open {
+  overflow: hidden;
+}
+
+a {
+  color: $accent-lavender-hover;
+  text-decoration-thickness: 1px;
+  text-decoration-skip-ink: auto;
+  text-underline-offset: 0.16em;
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+a:hover,
+a:focus-visible {
+  color: $text-primary;
+}
+
+a:focus-visible,
+button:focus-visible {
+  @include focus-ring;
+}
+
+::selection {
+  background: rgba($accent-lavender, 0.35);
+}
+
+hr {
+  background: linear-gradient(90deg, rgba($border-subtle, 0), rgba($border-subtle, 1), rgba($border-subtle, 0));
+  border: 0;
+  height: 1px;
+}
+
+blockquote {
+  border-left: 3px solid $accent-terracotta;
+  color: $text-secondary;
+  font-style: italic;
+  margin: $space-8 0;
+  padding-left: $space-6;
+}
+
+figure {
+  margin: 0;
+}
+
+.sr-only {
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+

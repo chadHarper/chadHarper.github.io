@@ -1,0 +1,412 @@
+.nav {
+  align-items: center;
+  border-bottom: 1px solid $border-subtle;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 72rem;
+  padding: $space-4 $space-6;
+  position: relative;
+}
+
+.nav__home {
+  color: $text-primary;
+  font-family: $font-sans;
+  font-size: $text-xl;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav__links {
+  display: none;
+  gap: $space-6;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link,
+.nav-panel__link {
+  color: $text-secondary;
+  font-family: $font-sans;
+  font-size: $text-sm;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nav__link[aria-current="page"],
+.nav-panel__link[aria-current="page"] {
+  color: $text-primary;
+  text-decoration: underline;
+  text-decoration-color: $accent-lavender;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.45rem;
+}
+
+.nav__toggle {
+  align-items: center;
+  background: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.24rem;
+  justify-content: center;
+  padding: $space-2;
+}
+
+.nav__toggle span:not(.sr-only) {
+  background: $text-primary;
+  border-radius: 999px;
+  display: block;
+  height: 2px;
+  width: 1.3rem;
+}
+
+.nav-panel {
+  background: rgba($bg-primary, 0.98);
+  inset: 100% 0 auto;
+  min-height: calc(100vh - 4.75rem);
+  position: absolute;
+  z-index: 20;
+}
+
+.nav-panel__inner {
+  display: flex;
+  flex-direction: column;
+  padding: $space-12 $space-6;
+}
+
+.nav-panel__link {
+  border-bottom: 1px solid $border-subtle;
+  font-size: $text-xl;
+  padding: $space-6 0;
+}
+
+.site-footer {
+  border-top: 1px solid $border-subtle;
+  margin: 0 auto;
+  max-width: 72rem;
+  padding: $space-16 $space-6 $space-8;
+  text-align: center;
+}
+
+.site-footer__links {
+  display: inline-flex;
+  gap: $space-4;
+}
+
+.site-footer__links a {
+  color: $text-secondary;
+  font-family: $font-sans;
+  font-size: $text-sm;
+  text-decoration: none;
+}
+
+.site-footer__links a + a::before {
+  color: $text-tertiary;
+  content: "·";
+  margin-right: $space-4;
+}
+
+.site-footer__copyright {
+  color: $text-tertiary;
+  font-family: $font-sans;
+  font-size: $text-xs;
+  margin: $space-4 0 0;
+}
+
+.section-card {
+  @include card-wash($accent-lavender, $bg-secondary);
+  border: 1px solid $border-subtle;
+  border-radius: 6px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset;
+  color: inherit;
+  display: block;
+  min-height: 11rem;
+  padding: $space-6;
+  position: relative;
+  text-decoration: none;
+}
+
+.section-card::after {
+  border-radius: inherit;
+  content: "";
+  inset: 0;
+  position: absolute;
+  transition: opacity 0.2s ease;
+}
+
+.section-card:hover,
+.section-card:focus-visible {
+  border-color: $accent-lavender;
+  box-shadow: $shadow-lift;
+  transform: translateY(-2px);
+}
+
+.section-card--research {
+  @include card-wash($accent-lavender, $accent-blush);
+}
+
+.section-card--teaching {
+  @include card-wash($accent-sage, $bg-elevated);
+}
+
+.section-card--fashion {
+  @include card-wash($accent-terracotta, $accent-blush);
+}
+
+.section-card--writing {
+  @include card-wash($accent-lavender, $accent-sage);
+}
+
+.section-card__title {
+  font-size: $text-xl;
+  margin-bottom: $space-3;
+}
+
+.section-card__desc {
+  color: $text-secondary;
+  margin: 0;
+}
+
+.filter-bar {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-4;
+  margin: $space-8 0;
+}
+
+.filter-btn {
+  background: transparent;
+  border-bottom: 2px solid transparent;
+  color: $text-secondary;
+  cursor: pointer;
+  font-family: $font-sans;
+  font-size: $text-sm;
+  font-weight: 500;
+  padding: $space-2 0;
+}
+
+.filter-btn.is-active {
+  border-color: $accent-lavender;
+  color: $text-primary;
+}
+
+.post-card,
+.course-card,
+.paper-card {
+  border-bottom: 1px solid $border-subtle;
+  padding: $space-6 0;
+}
+
+.post-card__link,
+.course-card__link,
+.paper-card__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.post-card__title,
+.course-card__title,
+.paper-card__title {
+  font-size: $text-xl;
+  margin-bottom: $space-2;
+}
+
+.post-card__link:hover .post-card__title,
+.post-card__link:focus-visible .post-card__title,
+.course-card__link:hover .course-card__title,
+.course-card__link:focus-visible .course-card__title,
+.paper-card__link:hover .paper-card__title,
+.paper-card__link:focus-visible .paper-card__title {
+  color: $accent-lavender-hover;
+}
+
+.post-card__meta,
+.course-card__meta,
+.post-meta {
+  align-items: center;
+  color: $text-secondary;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: $font-sans;
+  font-size: $text-sm;
+  gap: $space-3;
+}
+
+.post-card__desc,
+.course-card__desc,
+.paper-card__desc {
+  color: $text-secondary;
+  margin: $space-3 0 0;
+}
+
+.post-card--image .post-card__link {
+  display: grid;
+  gap: $space-4;
+}
+
+.post-card__image img {
+  aspect-ratio: 16 / 9;
+  border-radius: 4px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.badge {
+  background: $bg-secondary;
+  border-radius: 999px;
+  color: $text-secondary;
+  display: inline-block;
+  font-family: $font-sans;
+  font-size: $text-xs;
+  font-weight: 500;
+  padding: $space-1 $space-2;
+}
+
+.badge--critique,
+.badge--instructor {
+  background: rgba($accent-lavender, 0.18);
+  color: $text-primary;
+}
+
+.badge--note,
+.badge--status {
+  background: rgba($accent-sage, 0.2);
+  color: $text-primary;
+}
+
+.badge--teaching-assistant {
+  background: $bg-secondary;
+}
+
+.paper-card__tags {
+  color: $accent-sage;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-3;
+  list-style: none;
+  margin: $space-3 0 0;
+  padding: 0;
+}
+
+.paper-card__paper-link,
+.paper-ref__link,
+.back-link a {
+  font-family: $font-sans;
+  font-size: $text-sm;
+  text-decoration: none;
+}
+
+.paper-ref {
+  background: $bg-secondary;
+  border-left: 3px solid $accent-lavender;
+  border-radius: 0 4px 4px 0;
+  margin-bottom: $space-8;
+  padding: $space-4;
+}
+
+.paper-ref__title {
+  font-style: italic;
+  margin: 0 0 $space-2;
+}
+
+.paper-ref__journal {
+  color: $text-secondary;
+  font-family: $font-sans;
+  font-size: $text-xs;
+  margin: 0 0 $space-2;
+}
+
+.download-btn {
+  align-self: flex-start;
+  background: $bg-secondary;
+  border: 1px solid $border-subtle;
+  border-radius: 4px;
+  color: $text-primary;
+  display: inline-block;
+  font-family: $font-sans;
+  font-size: $text-sm;
+  font-weight: 500;
+  margin-top: $space-4;
+  padding: $space-2 $space-4;
+  text-decoration: none;
+}
+
+.download-btn:hover,
+.download-btn:focus-visible {
+  background: $bg-elevated;
+  border-color: $accent-lavender;
+  color: $text-primary;
+}
+
+.post-figure {
+  margin-bottom: $space-8;
+}
+
+.post-figure img {
+  border-radius: 6px;
+  width: 100%;
+}
+
+.back-link {
+  border-top: 1px solid $border-subtle;
+  margin-top: $space-12;
+  padding-top: $space-6;
+}
+
+.photo-gallery {
+  column-gap: $space-4;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: $space-8;
+  row-gap: $space-4;
+}
+
+.photo-gallery__item img {
+  border-radius: 4px;
+  width: 100%;
+}
+
+.cv-summary {
+  display: grid;
+  gap: $space-6;
+  margin-top: $space-8;
+}
+
+.cv-summary__block {
+  background: rgba($bg-secondary, 0.55);
+  border: 1px solid $border-subtle;
+  border-radius: 6px;
+  padding: $space-6;
+}
+
+.cv-summary__block h2 {
+  font-size: $text-xl;
+  margin-bottom: $space-3;
+}
+
+@media (min-width: $bp-tablet) {
+  .nav__toggle,
+  .nav-panel {
+    display: none;
+  }
+
+  .nav__links {
+    display: flex;
+  }
+
+  .post-card--image .post-card__link {
+    align-items: start;
+    grid-template-columns: 120px minmax(0, 1fr);
+  }
+
+  .post-card__image img {
+    aspect-ratio: 1 / 1;
+  }
+
+  .photo-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

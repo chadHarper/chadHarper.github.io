@@ -1,16 +1,14 @@
-<!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
   {% include head.html %}
   <body>
-    <div class="col-lg-8 mx-auto p-3 py-md-5">
+    <div class="site-shell">
       {% include header.html %}
-
-      {%- unless page.url == "/" -%}
-        {% include site-nav.html %}
-      {%- endunless -%}
-
-      {{ content }}
+      <main id="main" class="site-main">
+        {{ content }}
+      </main>
       {% include footer.html %}
     </div>
+    <script defer src="{{ '/assets/js/main.js' | relative_url }}"></script>
   </body>
 </html>

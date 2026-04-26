@@ -1,0 +1,35 @@
+<nav class="nav" aria-label="Main navigation">
+  <a class="nav__home" href="{{ '/' | relative_url }}">CH</a>
+
+  <button
+    class="nav__toggle"
+    type="button"
+    aria-expanded="false"
+    aria-controls="site-nav-panel"
+    data-nav-toggle
+  >
+    <span class="sr-only">Open navigation</span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <ul class="nav__links" data-nav-desktop>
+    <li><a class="nav__link" href="{{ '/research/' | relative_url }}"{% if page.section == "research" %} aria-current="page"{% endif %}>Research</a></li>
+    <li><a class="nav__link" href="{{ '/teaching/' | relative_url }}"{% if page.section == "teaching" %} aria-current="page"{% endif %}>Teaching</a></li>
+    <li><a class="nav__link" href="{{ '/fashion/' | relative_url }}"{% if page.section == "fashion" %} aria-current="page"{% endif %}>Fashion</a></li>
+    <li><a class="nav__link" href="{{ '/writing/' | relative_url }}"{% if page.section == "writing" %} aria-current="page"{% endif %}>Writing</a></li>
+    <li><a class="nav__link" href="{{ '/cv/' | relative_url }}"{% if page.section == "cv" %} aria-current="page"{% endif %}>CV</a></li>
+  </ul>
+
+  <div class="nav-panel" id="site-nav-panel" hidden data-nav-panel>
+    <div class="nav-panel__inner">
+      <a class="nav-panel__link" href="{{ '/research/' | relative_url }}"{% if page.section == "research" %} aria-current="page"{% endif %}>Research</a>
+      <a class="nav-panel__link" href="{{ '/teaching/' | relative_url }}"{% if page.section == "teaching" %} aria-current="page"{% endif %}>Teaching</a>
+      <a class="nav-panel__link" href="{{ '/fashion/' | relative_url }}"{% if page.section == "fashion" %} aria-current="page"{% endif %}>Fashion</a>
+      <a class="nav-panel__link" href="{{ '/writing/' | relative_url }}"{% if page.section == "writing" %} aria-current="page"{% endif %}>Writing</a>
+      <a class="nav-panel__link" href="{{ '/cv/' | relative_url }}"{% if page.section == "cv" %} aria-current="page"{% endif %}>CV</a>
+    </div>
+  </div>
+</nav>
+

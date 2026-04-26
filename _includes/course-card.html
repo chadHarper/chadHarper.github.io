@@ -1,0 +1,21 @@
+<article class="course-card">
+  <a href="{{ include.course.url | relative_url }}" class="course-card__link">
+    <h3 class="course-card__title">{{ include.course.title }}</h3>
+    <div class="course-card__meta">
+      <span>{{ include.course.institution }}</span>
+      <span aria-hidden="true">·</span>
+      <span>{{ include.course.semester }}</span>
+      <span class="badge badge--{{ include.course.role }}">
+        {% if include.course.role == "instructor" %}
+          Instructor
+        {% elsif include.course.role == "teaching-assistant" %}
+          Teaching Assistant
+        {% else %}
+          {{ include.course.role | replace: "-", " " | capitalize }}
+        {% endif %}
+      </span>
+    </div>
+    <p class="course-card__desc">{{ include.course.description }}</p>
+  </a>
+</article>
+

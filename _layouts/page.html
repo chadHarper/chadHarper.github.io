@@ -1,10 +1,41 @@
 ---
 layout: default
 ---
+{% if page.url == "/" %}
+  <article class="page page--home">
+    <section class="home-hero">
+      <p class="home-kicker">Physics, teaching, writing, and fashion criticism</p>
+      <h1 class="home-title">{{ site.title | upcase }}</h1>
+      {% comment %}Phase 2 illustration slot.{% endcomment %}
+      <div class="home-illustration-slot" aria-hidden="true"></div>
+      <div class="home-bio prose-flow">
+        {{ content }}
+      </div>
+    </section>
 
-<div class="row g-5 mb-5">
-  <div class="col-md-12">
-    <h3 class="fw-bold border-bottom pb-3 mb-5">{{ page.title }}</h3>
-    {{ content }}
-  </div>
-</div>
+    <section class="section-grid" aria-label="Site sections">
+      {% for section in site.data.sections %}
+        {% include section-card.html
+          name=section.name
+          url=section.url
+          description=section.description
+          accent=section.accent
+        %}
+      {% endfor %}
+    </section>
+  </article>
+{% else %}
+  <article class="page{% if page.section %} page--{{ page.section }}{% endif %}">
+    <div class="content-column">
+      <header class="page-header">
+        <h1 class="page-title">{{ page.title }}</h1>
+        {% if page.cv_pdf %}
+          <a class="download-btn" href="{{ page.cv_pdf | relative_url }}">Download PDF ↓</a>
+        {% endif %}
+      </header>
+      <div class="page-body prose-flow{% if page.wide_body %} page-body--wide{% endif %}">
+        {{ content }}
+      </div>
+    </div>
+  </article>
+{% endif %}

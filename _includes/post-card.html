@@ -1,0 +1,41 @@
+{% assign image_src = include.post.featured_image %}
+{% if image_src and image_src contains '://' %}
+  {% assign resolved_image_src = image_src %}
+{% elsif image_src %}
+  {% assign resolved_image_src = image_src | relative_url %}
+{% endif %}
+
+<article
+  class="post-card{% if include.show_image %} post-card--image{% else %} post-card--text{% endif %}"
+  data-filter-item
+  {% if include.show_type %}data-type="{{ include.post.type | default: 'note' }}"{% endif %}
+  {% if include.show_category %}data-category="{{ include.post.category | default: 'notes' }}"{% endif %}
+>
+  <a href="{{ include.post.url | relative_url }}" class="post-card__link">
+    {% if include.show_image and resolved_image_src %}
+      <div class="post-card__image">
+        <img src="{{ resolved_image_src }}" alt="{{ include.post.featured_image_alt | escape }}" loading="lazy">
+      </div>
+    {% endif %}
+    <div class="post-card__content">
+      <h3 class="post-card__title">{{ include.post.title }}</h3>
+      <div class="post-card__meta">
+        <time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: "%B %d, %Y" }}</time>
+        {% if include.show_type %}
+          <span class="badge badge--{{ include.post.type }}">{{ include.post.type | capitalize }}</span>
+        {% endif %}
+        {% if include.show_category %}
+          <span class="badge">
+            {% if include.post.category == "ethics-and-ai" %}
+              Ethics &amp; AI
+            {% else %}
+              {{ include.post.category | replace: "-", " " | capitalize }}
+            {% endif %}
+          </span>
+        {% endif %}
+      </div>
+      <p class="post-card__desc">{{ include.post.description }}</p>
+    </div>
+  </a>
+</article>
+

@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<article class="page page--research">
+  <div class="content-column">
+    <header class="page-header">
+      <h1 class="page-title">{{ page.title }}</h1>
+    </header>
+    <div class="page-body prose-flow">
+      {{ content }}
+    </div>
+    <hr class="page-divider">
+    <section class="listing-stack" aria-label="Research explainers">
+      {% assign papers = site.papers | sort: "date" | reverse %}
+      {% if papers.size > 0 %}
+        {% for paper in papers %}
+          {% include paper-card.html paper=paper %}
+        {% endfor %}
+      {% else %}
+        <p class="empty-state">Paper explainers will appear here as they are ready.</p>
+      {% endif %}
+    </section>
+  </div>
+</article>
+

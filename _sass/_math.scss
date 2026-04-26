@@ -1,0 +1,17 @@
+.katex-display,
+mjx-container[display="true"] {
+  background: $bg-elevated;
+  border-radius: 4px;
+  margin: $space-6 0;
+  overflow-x: auto;
+  padding: $space-4 $space-6;
+}
+
+.katex-display > .katex {
+  white-space: normal;
+}
+
+.katex {
+  font-size: 1em;
+}
+

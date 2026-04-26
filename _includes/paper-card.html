@@ -1,0 +1,18 @@
+<article class="paper-card">
+  <a href="{{ include.paper.url | relative_url }}" class="paper-card__link">
+    <h3 class="paper-card__title">{{ include.paper.title }}</h3>
+    {% if include.paper.paper_status %}
+      <span class="badge badge--status">{{ include.paper.paper_status | replace: "-", " " | capitalize }}</span>
+    {% endif %}
+  </a>
+  <p class="paper-card__desc">{{ include.paper.description }}</p>
+  {% if include.paper.tags and include.paper.tags.size > 0 %}
+    <ul class="paper-card__tags" aria-label="Tags">
+      {% for tag in include.paper.tags %}
+        <li>{{ tag }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  <a href="{{ include.paper.paper_url }}" class="paper-card__paper-link" target="_blank" rel="noopener">Read the paper →</a>
+</article>
+

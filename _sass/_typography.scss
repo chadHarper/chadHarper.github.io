@@ -1,0 +1,143 @@
+body,
+p,
+li {
+  font-family: $font-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $text-primary;
+  font-family: $font-sans;
+  line-height: 1.3;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.65rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+@media (min-width: $bp-tablet) {
+  body {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: $text-3xl;
+  }
+
+  h2 {
+    font-size: $text-2xl;
+  }
+
+  h3 {
+    font-size: $text-xl;
+  }
+}
+
+.prose-flow {
+  color: $text-primary;
+}
+
+.prose-flow > * + * {
+  margin-top: $space-6;
+}
+
+.prose-flow p {
+  margin: 0;
+}
+
+.prose-flow h2,
+.prose-flow h3,
+.prose-flow h4 {
+  margin-top: 2.5em;
+  margin-bottom: 0.75em;
+}
+
+.prose-flow ul,
+.prose-flow ol {
+  margin: $space-6 0;
+  padding-left: 1.25rem;
+}
+
+.prose-flow li + li {
+  margin-top: $space-2;
+}
+
+.prose-flow strong {
+  font-weight: 700;
+}
+
+.prose-flow em {
+  font-style: italic;
+}
+
+.prose-flow :not(pre) > code {
+  background: $bg-secondary;
+  border-radius: 3px;
+  color: $text-primary;
+  font-family: $font-mono;
+  font-size: 0.875em;
+  padding: 0.15em 0.4em;
+}
+
+.home-kicker {
+  color: $text-secondary;
+  font-family: $font-sans;
+  font-size: $text-xs;
+  letter-spacing: 0.12em;
+  margin-bottom: $space-4;
+  text-transform: uppercase;
+}
+
+.home-title {
+  font-size: 2.15rem;
+  letter-spacing: 0.02em;
+}
+
+@media (min-width: $bp-tablet) {
+  .home-title {
+    font-size: $text-display;
+  }
+}
+
+.home-bio {
+  color: $text-secondary;
+  font-size: 1.08rem;
+  max-width: 38rem;
+}
+
+@media (min-width: $bp-tablet) {
+  .home-bio {
+    font-size: $text-lg;
+  }
+}
+
+.page-title,
+.post-title {
+  font-size: 1.9rem;
+}
+
+@media (min-width: $bp-tablet) {
+  .page-title,
+  .post-title {
+    font-size: $text-3xl;
+  }
+}
+
+.section-heading {
+  font-size: $text-2xl;
+  margin-bottom: $space-8;
+}
+

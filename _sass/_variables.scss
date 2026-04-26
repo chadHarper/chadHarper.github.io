@@ -1,0 +1,63 @@
+$bg-primary: #F5F0EB;
+$bg-secondary: #EDE7E0;
+$bg-elevated: #FAF8F5;
+$text-primary: #2C2825;
+$text-secondary: #6B6560;
+$text-tertiary: #9C9590;
+$border-subtle: #DDD6CE;
+$border-emphasis: #C4BCB3;
+
+$accent-lavender: #B8A9C9;
+$accent-lavender-hover: #9B89B3;
+$accent-sage: #A8BDB5;
+$accent-terracotta: #C4A28A;
+$accent-blush: #D4B5A8;
+
+$code-bg: #2C2825;
+$code-text: #F5F0EB;
+$focus-ring: $accent-sage;
+
+$font-serif: "Literata", Georgia, "Times New Roman", serif;
+$font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$font-mono: "JetBrains Mono", "Fira Code", "Courier New", monospace;
+
+$text-xs: 0.75rem;
+$text-sm: 0.875rem;
+$text-base: 1rem;
+$text-lg: 1.125rem;
+$text-xl: 1.375rem;
+$text-2xl: 1.75rem;
+$text-3xl: 2.25rem;
+$text-display: 3rem;
+
+$space-1: 0.25rem;
+$space-2: 0.5rem;
+$space-3: 0.75rem;
+$space-4: 1rem;
+$space-6: 1.5rem;
+$space-8: 2rem;
+$space-12: 3rem;
+$space-16: 4rem;
+$space-24: 6rem;
+$space-32: 8rem;
+
+$bp-mobile: 375px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+$bp-wide: 1280px;
+
+$shadow-soft: 0 14px 32px rgba(44, 40, 37, 0.08);
+$shadow-lift: 0 18px 34px rgba(44, 40, 37, 0.1);
+
+@mixin focus-ring {
+  outline: 2px solid $focus-ring;
+  outline-offset: 4px;
+}
+
+@mixin card-wash($first, $second) {
+  background:
+    linear-gradient(155deg, rgba($first, 0.18), rgba($second, 0.04)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0)),
+    $bg-secondary;
+}
+

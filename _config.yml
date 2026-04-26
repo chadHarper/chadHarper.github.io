@@ -1,30 +1,97 @@
-# Site settings
-url: "http://chadHarper.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
-title: "CH" # the name of your site, e.g. ACME Corp.
-description: "Some web action. A little site situation."
+title: "Chad Harper"
+description: "Physicist, educator, and writer working across science, ethics, and fashion criticism."
+url: "https://chadharper.github.io"
+baseurl: ""
+lang: "en-US"
+timezone: "America/Los_Angeles"
 
-#Exclusions
-exclude:
-  - courses 
-  - people
-  
-# Collections
+author:
+  name: "Chad Harper"
+  email: ""
+  bio: "Ph.D. candidate in Physics at UC Berkeley and graduate fellow at the Kavli Center for Ethics, Science, and the Public."
+
+github_url: "https://github.com/chadHarper"
+linkedin_url: "https://www.linkedin.com/in/chad-harper-91b785b9/"
+photoshoots_url: "https://www.chad-harper.com/home/styling-by-harper"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: null
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+  syntax_highlighter: rouge
+
+highlighter: rouge
+permalink: pretty
+
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
 collections:
   writings:
     output: true
-    permalink: /writings/:title
+    permalink: /writing/:slug/
   fashion_criticism:
     output: true
-    permalink: /fashion/criticism/:name/
+    permalink: /fashion/criticism/:slug/
+  papers:
+    output: true
+    permalink: /research/:slug/
+  courses:
+    output: true
+    permalink: /teaching/:slug/
+  photoshoots:
+    output: true
+    permalink: /fashion/photoshoots/:slug/
 
-# Plugins
-plugins:
-  - jekyll-paginate-v2
+defaults:
+  - scope:
+      path: ""
+      type: "writings"
+    values:
+      layout: "post"
+      section: "writing"
+      category: "notes"
+      math: false
+      math_engine: "katex"
+  - scope:
+      path: ""
+      type: "fashion_criticism"
+    values:
+      layout: "post"
+      section: "fashion"
+      math: false
+  - scope:
+      path: ""
+      type: "papers"
+    values:
+      layout: "post"
+      section: "research"
+      math: true
+      math_engine: "katex"
+  - scope:
+      path: ""
+      type: "courses"
+    values:
+      layout: "course"
+      section: "teaching"
+  - scope:
+      path: ""
+      type: "photoshoots"
+    values:
+      layout: "photoshoot"
+      section: "fashion"
+  - scope:
+      path: ""
+    values:
+      image: "/assets/img/headshot.jpg"
 
-# Pagination settings
-pagination:
-  enabled: true
-  collection: fashion_criticism
-  per_page: 5
-  permalink: '/fashion/criticism/page:num/'
+exclude:
+  - Gemfile.lock
+  - node_modules
+  - vendor

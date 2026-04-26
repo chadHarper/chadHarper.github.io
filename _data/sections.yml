@@ -1,0 +1,20 @@
+- name: "Research"
+  url: "/research/"
+  description: "Paper explainers and academic work."
+  accent: "research"
+
+- name: "Teaching"
+  url: "/teaching/"
+  description: "Courses, teaching experience, and materials."
+  accent: "teaching"
+
+- name: "Fashion"
+  url: "/fashion/"
+  description: "Criticism, photoshoots, and style culture."
+  accent: "fashion"
+
+- name: "Writing"
+  url: "/writing/"
+  description: "Essays, technical notes, and everything else."
+  accent: "writing"
+

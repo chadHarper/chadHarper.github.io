@@ -1,12 +1,12 @@
 ---
-layout: home
+layout: page
 title: "Home"
+description: "Chad Harper is a UC Berkeley physics Ph.D. candidate working across science, teaching, and fashion criticism."
+section: "home"
 ---
+I’m a Ph.D. candidate in the Physics Department at the University of California, Berkeley, and a graduate fellow at the Kavli Center for Ethics, Science, and the Public. My research uses tools from statistical physics, information theory, and dynamical systems to study how local structure shapes global behavior in complex networked systems.
 
+I also teach physics at Laney College and mathematics at Mount Tamalpais College at San Quentin, where I’ve developed courses that treat the classroom as a working scientific community. Before returning to school, I worked as a Scientific Data Analyst and Consultant at Deloitte, building machine learning pipelines and graph-based models for public-sector clients.
 
-Currently, I'm a Ph.D. student in the physics department at the University of California, Berkeley, and a fellow at The Kavli Institute for Ethics, Science, and Society. I am broadly interested in graph theory, problems in the foundations of probability theory, complex and stochastic systems, and applications of decision theory to medicine.
-
-Before returning to school, I worked as a  Consultant at Deloitte, acting as a Scientific Data Analyst primarily for government clients.
-
-
+Alongside my scientific work, I write about fashion, aesthetics, and culture, and I direct editorial-style photoshoots. That creative practice shapes how I think about science communication: as a problem of structure, interpretation, and making hidden relationships visible.
 

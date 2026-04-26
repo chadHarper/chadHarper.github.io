@@ -1,0 +1,14 @@
+{% if include.images and include.images.size > 0 %}
+  <div class="photo-gallery">
+    {% for image in include.images %}
+      {% assign gallery_src = image.src %}
+      {% unless gallery_src contains '://' %}
+        {% assign gallery_src = gallery_src | relative_url %}
+      {% endunless %}
+      <figure class="photo-gallery__item">
+        <img src="{{ gallery_src }}" alt="{{ image.alt | escape }}" loading="lazy">
+      </figure>
+    {% endfor %}
+  </div>
+{% endif %}
+

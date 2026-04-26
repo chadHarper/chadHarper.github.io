@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<article class="page page--teaching">
+  <div class="content-column">
+    <header class="page-header">
+      <h1 class="page-title">{{ page.title }}</h1>
+    </header>
+    <div class="page-body prose-flow">
+      {{ content }}
+    </div>
+    <hr class="page-divider">
+  </div>
+
+  <div class="content-column content-column--wide">
+    <section aria-label="Courses">
+      <h2 class="section-heading">Courses</h2>
+      {% assign courses = site.courses | sort: "order" %}
+      {% if courses.size > 0 %}
+        <div class="listing-stack">
+          {% for course in courses %}
+            {% include course-card.html course=course %}
+          {% endfor %}
+        </div>
+      {% else %}
+        <p class="empty-state">Course pages and syllabi will be added once the materials are ready.</p>
+      {% endif %}
+    </section>
+  </div>
+</article>
+

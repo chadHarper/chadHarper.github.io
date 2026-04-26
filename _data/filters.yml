@@ -1,0 +1,16 @@
+writing:
+  - value: "all"
+    label: "All"
+  - value: "ethics-and-ai"
+    label: "Ethics & AI"
+  - value: "notes"
+    label: "Notes"
+
+fashion:
+  - value: "all"
+    label: "All"
+  - value: "note"
+    label: "Notes"
+  - value: "critique"
+    label: "Critique"
+

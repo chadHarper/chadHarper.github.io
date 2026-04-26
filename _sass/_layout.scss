@@ -1,0 +1,142 @@
+.site-shell {
+  min-height: 100vh;
+}
+
+.site-main {
+  padding: $space-16 $space-6 $space-24;
+}
+
+.content-column,
+.page--home {
+  margin: 0 auto;
+  max-width: 72rem;
+}
+
+.content-column {
+  width: 100%;
+}
+
+.content-column > .page-body,
+.post-page .post-body,
+.post-page .post-header,
+.post-page .paper-ref,
+.page--research .page-body,
+.page--teaching .page-body {
+  max-width: 38rem;
+}
+
+.content-column--wide,
+.page--home {
+  max-width: 72rem;
+}
+
+.page-header,
+.post-header {
+  margin-bottom: $space-8;
+}
+
+.page-body,
+.post-body {
+  width: 100%;
+}
+
+.page-body--wide {
+  max-width: 72rem !important;
+}
+
+.page-divider {
+  margin: $space-12 0 $space-12;
+  max-width: 14rem;
+}
+
+.page {
+  min-height: 60vh;
+}
+
+.page--home {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: $space-16;
+}
+
+.home-hero {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: $space-8;
+  text-align: center;
+}
+
+.home-illustration-slot {
+  height: $space-8;
+  width: 100%;
+}
+
+.section-grid {
+  display: grid;
+  gap: $space-6;
+  width: 100%;
+}
+
+.listing-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.listing-region > * + * {
+  margin-top: 0;
+}
+
+.empty-state {
+  background: rgba($bg-secondary, 0.5);
+  border: 1px solid $border-subtle;
+  border-radius: 6px;
+  color: $text-secondary;
+  margin: 0;
+  padding: $space-6;
+}
+
+.fashion-gateway {
+  display: grid;
+  gap: $space-6;
+  margin-top: $space-8;
+}
+
+.not-found {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 55vh;
+  text-align: center;
+}
+
+.not-found__code {
+  color: $text-tertiary;
+  font-family: $font-sans;
+  font-size: clamp(3rem, 10vw, 6rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.not-found__message {
+  color: $text-secondary;
+  font-size: $text-lg;
+  margin-top: $space-4;
+}
+
+@media (min-width: $bp-tablet) {
+  .site-main {
+    padding-top: $space-24;
+  }
+
+  .home-illustration-slot {
+    height: $space-12;
+  }
+
+  .section-grid,
+  .fashion-gateway {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

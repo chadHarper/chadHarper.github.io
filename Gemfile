@@ -1,10 +1,10 @@
 source "https://rubygems.org"
 
-# Core
-gem "jekyll", "~> 4.2"
-gem "jekyll-theme-primer", "~> 0.6.0"
+gem "ffi", "~> 1.16"
+gem "jekyll", "~> 4.3"
 
-# Plugins
 group :jekyll_plugins do
-  gem "jekyll-paginate-v2"
+  gem "jekyll-feed"
+  gem "jekyll-seo-tag"
+  gem "jekyll-sitemap"
 end
