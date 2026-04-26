@@ -102,8 +102,10 @@ h3 {
 }
 
 .home-title {
+  color: $accent-lavender-hover;
   font-size: 2.15rem;
   letter-spacing: 0.02em;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.24);
 }
 
 @media (min-width: $bp-tablet) {
@@ -140,4 +142,3 @@ h3 {
   font-size: $text-2xl;
   margin-bottom: $space-8;
 }
-

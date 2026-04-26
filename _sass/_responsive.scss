@@ -8,6 +8,10 @@
   .cv-summary__block {
     min-height: auto;
   }
+
+  .about-intro__image {
+    max-width: 22rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -20,4 +24,3 @@
     transition-duration: 0.01ms !important;
   }
 }
-

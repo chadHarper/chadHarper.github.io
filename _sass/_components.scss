@@ -116,31 +116,54 @@
 }
 
 .section-card {
-  @include card-wash($accent-lavender, $bg-secondary);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.08) 48%, rgba(255, 255, 255, 0)),
+    $bg-secondary;
   border: 1px solid $border-subtle;
   border-radius: 6px;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset;
   color: inherit;
   display: block;
+  isolation: isolate;
   min-height: 11rem;
+  overflow: hidden;
   padding: $space-6;
   position: relative;
   text-decoration: none;
 }
 
+.section-card::before {
+  background:
+    var(--card-wash),
+    radial-gradient(circle at 18% 14%, rgba(255, 255, 255, 0.2), transparent 26%);
+  border-radius: inherit;
+  content: "";
+  inset: 0;
+  opacity: 0.98;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+}
+
 .section-card::after {
   background:
-    radial-gradient(circle at 18% 14%, rgba(255, 255, 255, 0.2), transparent 26%),
+    radial-gradient(circle at 18% 14%, rgba(255, 255, 255, 0.16), transparent 26%),
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23grain)' opacity='0.9'/%3E%3C/svg%3E");
   background-size: auto, 180px 180px;
   border-radius: inherit;
   content: "";
   inset: 0;
   mix-blend-mode: multiply;
-  opacity: 0.16;
+  opacity: 0.18;
   pointer-events: none;
   position: absolute;
   transition: opacity 0.2s ease;
+  z-index: 0;
+}
+
+.section-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .section-card:hover,
@@ -151,19 +174,32 @@
 }
 
 .section-card--research {
-  @include card-wash($accent-lavender, $accent-blush);
+  --card-wash:
+    radial-gradient(132% 94% at 16% 100%, rgba(184, 169, 201, 0.52) 0, rgba(184, 169, 201, 0.32) 24%, rgba(184, 169, 201, 0.12) 48%, rgba(184, 169, 201, 0) 74%),
+    radial-gradient(68% 58% at 82% 22%, rgba(255, 255, 255, 0.34) 0, rgba(255, 255, 255, 0) 80%),
+    radial-gradient(88% 60% at 64% 72%, rgba(212, 181, 168, 0.06) 0, rgba(212, 181, 168, 0) 70%);
 }
 
 .section-card--teaching {
-  @include card-wash($accent-sage, $bg-elevated);
+  --card-wash:
+    radial-gradient(118% 96% at 64% 48%, rgba(168, 189, 181, 0.44) 0, rgba(168, 189, 181, 0.26) 36%, rgba(168, 189, 181, 0.1) 60%, rgba(168, 189, 181, 0) 84%),
+    radial-gradient(72% 56% at 14% 16%, rgba(255, 255, 255, 0.3) 0, rgba(255, 255, 255, 0) 76%),
+    radial-gradient(60% 48% at 82% 84%, rgba(168, 189, 181, 0.14) 0, rgba(168, 189, 181, 0) 74%);
 }
 
 .section-card--fashion {
-  @include card-wash($accent-terracotta, $accent-blush);
+  --card-wash:
+    radial-gradient(118% 84% at 22% 18%, rgba(212, 181, 168, 0.4) 0, rgba(212, 181, 168, 0.24) 26%, rgba(212, 181, 168, 0.08) 50%, rgba(212, 181, 168, 0) 78%),
+    radial-gradient(124% 92% at 8% 100%, rgba(196, 162, 138, 0.5) 0, rgba(196, 162, 138, 0.3) 24%, rgba(196, 162, 138, 0.1) 48%, rgba(196, 162, 138, 0) 72%),
+    radial-gradient(40% 34% at 92% 90%, rgba(184, 169, 201, 0.5) 0, rgba(184, 169, 201, 0.24) 28%, rgba(184, 169, 201, 0) 58%),
+    radial-gradient(58% 54% at 58% 22%, rgba(255, 255, 255, 0.24) 0, rgba(255, 255, 255, 0) 78%);
 }
 
 .section-card--writing {
-  @include card-wash($accent-lavender, $accent-sage);
+  --card-wash:
+    radial-gradient(126% 96% at 74% 64%, rgba(184, 169, 201, 0.56) 0, rgba(184, 169, 201, 0.34) 36%, rgba(184, 169, 201, 0.13) 62%, rgba(184, 169, 201, 0) 88%),
+    radial-gradient(72% 56% at 18% 18%, rgba(255, 255, 255, 0.28) 0, rgba(255, 255, 255, 0) 76%),
+    radial-gradient(62% 48% at 18% 88%, rgba(184, 169, 201, 0.18) 0, rgba(184, 169, 201, 0) 74%);
 }
 
 .section-card__title {
@@ -397,6 +433,47 @@
   margin-bottom: $space-3;
 }
 
+.about-intro {
+  align-items: start;
+  display: grid;
+  gap: $space-8;
+  margin-top: $space-2;
+}
+
+.about-intro__media {
+  margin: 0;
+}
+
+.about-intro__image {
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0)),
+    rgba($bg-secondary, 0.72);
+  border: 1px solid $border-subtle;
+  border-radius: 6px;
+  box-shadow: $shadow-soft;
+  padding: $space-4;
+}
+
+.about-intro__image img {
+  border-radius: 4px;
+  width: 100%;
+}
+
+.about-intro__caption {
+  color: $text-tertiary;
+  font-family: $font-sans;
+  font-size: $text-xs;
+  margin-top: $space-3;
+}
+
+.about-intro__copy > * + * {
+  margin-top: $space-4;
+}
+
+.about-intro__copy p {
+  margin: 0;
+}
+
 @media (min-width: $bp-tablet) {
   .nav__toggle,
   .nav-panel {
@@ -418,5 +495,9 @@
 
   .photo-gallery {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-intro {
+    grid-template-columns: minmax(0, 18rem) minmax(0, 1fr);
   }
 }
