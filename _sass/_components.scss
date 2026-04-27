@@ -146,15 +146,13 @@
 }
 
 .section-card::after {
-  background:
-    radial-gradient(circle at 18% 14%, rgba(255, 255, 255, 0.16), transparent 26%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.62' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23grain)' opacity='0.9'/%3E%3C/svg%3E");
-  background-size: auto, 220px 220px;
+  background-image: $watercolor-grain;
+  background-size: 200px 200px;
   border-radius: inherit;
   content: "";
   inset: 0;
   mix-blend-mode: multiply;
-  opacity: 0.22;
+  opacity: 0.10;
   pointer-events: none;
   position: absolute;
   transition: opacity 0.2s ease;
@@ -346,8 +344,8 @@
 .paper-ref {
   background:
     linear-gradient(160deg, rgba($bg-secondary, 0.9), rgba($bg-elevated, 0.96)),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.62' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23grain)' opacity='0.88'/%3E%3C/svg%3E");
-  background-size: auto, 220px 220px;
+    $watercolor-grain;
+  background-size: auto, 200px 200px;
   border-left: 3px solid $accent-lavender;
   border-radius: 0 4px 4px 0;
   margin-bottom: $space-8;
@@ -424,9 +422,9 @@
 
 .cv-summary__block {
   background:
-    linear-gradient(160deg, rgba($bg-secondary, 0.68), rgba($bg-elevated, 0.78)),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.62' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23grain)' opacity='0.84'/%3E%3C/svg%3E");
-  background-size: auto, 220px 220px;
+    linear-gradient(160deg, rgba($bg-secondary, 0.72), rgba($bg-elevated, 0.82)),
+    $watercolor-grain;
+  background-size: auto, 200px 200px;
   border: 1px solid $border-subtle;
   border-radius: 6px;
   padding: $space-6;
@@ -451,9 +449,9 @@
 .about-intro__image {
   background:
     linear-gradient(160deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0)),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.62' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23grain)' opacity='0.82'/%3E%3C/svg%3E"),
+    $watercolor-grain,
     rgba($bg-secondary, 0.72);
-  background-size: auto, 220px 220px, auto;
+  background-size: auto, 200px 200px, auto;
   border: 1px solid $border-subtle;
   border-radius: 6px;
   box-shadow: $shadow-soft;

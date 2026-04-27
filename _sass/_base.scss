@@ -22,14 +22,12 @@ body {
 
 body::before {
   background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320' viewBox='0 0 320 320'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='320' height='320' filter='url(%23noise)' opacity='0.96'/%3E%3C/svg%3E"),
-    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.055) 0, rgba(255, 255, 255, 0.055) 2px, transparent 2px, transparent 10px),
-    repeating-linear-gradient(90deg, rgba(186, 177, 178, 0.04) 0, rgba(186, 177, 178, 0.04) 1px, transparent 1px, transparent 12px);
-  background-size: 320px 320px, 100% 100%, 100% 100%;
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23grain)' opacity='0.55'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
   content: "";
   inset: 0;
   mix-blend-mode: multiply;
-  opacity: 0.28;
+  opacity: 0.07;
   pointer-events: none;
   position: fixed;
   z-index: -1;
@@ -55,7 +53,7 @@ body::after {
   }
 
   body::before {
-    opacity: 0.22;
+    opacity: 0.05;
   }
 
   body::after {
