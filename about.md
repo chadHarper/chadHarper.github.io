@@ -12,7 +12,7 @@ cv_pdf: "/assets/pdf/cv.pdf"
     <div class="about-intro__image">
       <img src="/assets/img/headshot.jpg" alt="Chad Harper">
     </div>
-    <figcaption class="about-intro__caption">Current headshot.</figcaption>
+    <figcaption class="about-intro__caption"> ^_^ </figcaption>
   </figure>
 
   <div class="about-intro__copy">
@@ -27,7 +27,7 @@ cv_pdf: "/assets/pdf/cv.pdf"
 <div class="cv-summary">
   <section class="cv-summary__block">
     <h2>Current Roles</h2>
-    <p>Ph.D. candidate in Physics at the University of California, Berkeley, and graduate fellow at the Kavli Center for Ethics, Science, and the Public.</p>
+    <p>Ph.D. candidate in Physics at the University of California, Berkeley, graduate fellow at the Kavli Center for Ethics, Science, and the Public, and instructor of physics at Laney College.</p>
   </section>
 
   <section class="cv-summary__block">
