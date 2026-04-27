@@ -5,11 +5,11 @@ html {
 body {
   background-color: $bg-primary;
   background-image:
-    radial-gradient(circle at 14% 12%, rgba($accent-blush, 0.08), transparent 30%),
-    radial-gradient(circle at 84% 18%, rgba(191, 175, 180, 0.07), transparent 28%),
-    radial-gradient(circle at 22% 82%, rgba(214, 194, 199, 0.055), transparent 24%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.05) 26%, rgba(255, 255, 255, 0) 56%),
-    linear-gradient(180deg, #f7f2f3 0%, #f4eef0 100%);
+    radial-gradient(circle at 14% 12%, rgba($accent-peach, 0.09), transparent 30%),
+    radial-gradient(circle at 84% 18%, rgba($accent-blush, 0.07), transparent 28%),
+    radial-gradient(circle at 22% 82%, rgba(214, 194, 199, 0.045), transparent 24%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0.05) 24%, rgba(255, 255, 255, 0) 54%),
+    linear-gradient(180deg, #f4e6e5 0%, #f2e1e0 100%);
   background-attachment: fixed;
   color: $text-primary;
   font-family: $font-serif;
@@ -37,9 +37,9 @@ body::before {
 
 body::after {
   background:
-    radial-gradient(circle at 12% 22%, rgba(194, 176, 182, 0.065), transparent 25%),
-    radial-gradient(circle at 74% 11%, rgba($accent-blush, 0.045), transparent 18%),
-    radial-gradient(circle at 88% 78%, rgba(214, 194, 199, 0.04), transparent 22%);
+    radial-gradient(circle at 12% 22%, rgba($accent-peach, 0.06), transparent 25%),
+    radial-gradient(circle at 74% 11%, rgba($accent-blush, 0.04), transparent 18%),
+    radial-gradient(circle at 88% 78%, rgba(214, 194, 199, 0.035), transparent 22%);
   content: "";
   filter: blur(20px);
   inset: -8%;

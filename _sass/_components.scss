@@ -189,10 +189,11 @@
 
 .section-card--fashion {
   --card-wash:
-    radial-gradient(118% 84% at 22% 18%, rgba(212, 181, 168, 0.4) 0, rgba(212, 181, 168, 0.24) 26%, rgba(212, 181, 168, 0.08) 50%, rgba(212, 181, 168, 0) 78%),
-    radial-gradient(124% 92% at 8% 100%, rgba(196, 162, 138, 0.5) 0, rgba(196, 162, 138, 0.3) 24%, rgba(196, 162, 138, 0.1) 48%, rgba(196, 162, 138, 0) 72%),
-    radial-gradient(40% 34% at 92% 90%, rgba(184, 169, 201, 0.5) 0, rgba(184, 169, 201, 0.24) 28%, rgba(184, 169, 201, 0) 58%),
-    radial-gradient(58% 54% at 58% 22%, rgba(255, 255, 255, 0.24) 0, rgba(255, 255, 255, 0) 78%);
+    radial-gradient(108% 82% at 18% 20%, rgba($accent-peach, 0.72) 0, rgba($accent-peach, 0.42) 24%, rgba($accent-peach, 0.14) 52%, rgba($accent-peach, 0) 76%),
+    radial-gradient(132% 92% at 10% 100%, rgba($accent-coral, 0.7) 0, rgba($accent-coral, 0.4) 24%, rgba($accent-coral, 0.12) 52%, rgba($accent-coral, 0) 76%),
+    radial-gradient(76% 60% at 56% 18%, rgba(252, 233, 214, 0.5) 0, rgba(252, 233, 214, 0.18) 38%, rgba(252, 233, 214, 0) 72%),
+    radial-gradient(42% 34% at 92% 90%, rgba(184, 169, 201, 0.46) 0, rgba(184, 169, 201, 0.2) 30%, rgba(184, 169, 201, 0) 58%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0));
 }
 
 .section-card--writing {
