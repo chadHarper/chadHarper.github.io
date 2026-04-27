@@ -55,7 +55,7 @@
   justify-content: space-between;
   margin: 0 auto;
   max-width: 72rem;
-  padding: $space-4 $space-6;
+  padding: $space-4;
 }
 
 .nav__home {
@@ -100,6 +100,8 @@
   flex-direction: column;
   gap: 0.24rem;
   justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
   padding: $space-2;
 }
 
@@ -121,7 +123,7 @@
 .nav-panel__inner {
   display: flex;
   flex-direction: column;
-  padding: $space-12 $space-6;
+  padding: $space-8 $space-4 $space-12;
 }
 
 .nav-panel__link {
@@ -134,13 +136,15 @@
   border-top: 1px solid rgba($border-subtle, 0.68);
   margin: 0 auto;
   max-width: 72rem;
-  padding: $space-16 $space-6 $space-8;
+  padding: $space-12 $space-4 $space-6;
   text-align: center;
 }
 
 .site-footer__links {
-  display: inline-flex;
-  gap: $space-4;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2 $space-4;
+  justify-content: center;
 }
 
 .site-footer__links a {
@@ -274,7 +278,9 @@
   font-family: $font-sans;
   font-size: $text-sm;
   font-weight: 500;
+  min-height: 40px;
   padding: $space-2 0;
+  white-space: nowrap;
 }
 
 .filter-btn.is-active {
@@ -413,15 +419,17 @@
 
 .download-btn {
   align-self: flex-start;
+  align-items: center;
   background: $bg-secondary;
   border: 1px solid $border-subtle;
   border-radius: 4px;
   color: $text-primary;
-  display: inline-block;
+  display: inline-flex;
   font-family: $font-sans;
   font-size: $text-sm;
   font-weight: 500;
   margin-top: $space-4;
+  min-height: 44px;
   padding: $space-2 $space-4;
   text-decoration: none;
 }
@@ -490,7 +498,9 @@
 }
 
 .about-intro__media {
+  justify-self: center;
   margin: 0;
+  width: 100%;
 }
 
 .about-intro__image {
@@ -502,11 +512,13 @@
   border: 1px solid $border-subtle;
   border-radius: 6px;
   box-shadow: $shadow-soft;
+  max-width: min(100%, 22rem);
   padding: $space-4;
 }
 
 .about-intro__image img {
   border-radius: 4px;
+  display: block;
   width: 100%;
 }
 
@@ -515,6 +527,7 @@
   font-family: $font-sans;
   font-size: $text-xs;
   margin-top: $space-3;
+  text-align: center;
 }
 
 .about-intro__copy > * + * {
@@ -533,6 +546,20 @@
 
   .nav__links {
     display: flex;
+  }
+
+  .nav {
+    padding-left: $space-6;
+    padding-right: $space-6;
+  }
+
+  .nav-panel__inner {
+    padding-left: $space-6;
+    padding-right: $space-6;
+  }
+
+  .site-footer {
+    padding: $space-16 $space-6 $space-8;
   }
 
   .post-card--image .post-card__link {

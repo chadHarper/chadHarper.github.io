@@ -3,7 +3,7 @@
 }
 
 .site-main {
-  padding: $space-16 $space-6 $space-24;
+  padding: $space-12 $space-4 $space-16;
   position: relative;
 }
 
@@ -58,26 +58,26 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: $space-16;
+  gap: $space-12;
 }
 
 .home-hero {
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding-top: $space-8;
+  padding-top: $space-4;
   text-align: center;
   width: 100%;
 }
 
 .home-illustration-slot {
-  height: $space-8;
+  height: $space-6;
   width: 100%;
 }
 
 .section-grid {
   display: grid;
-  gap: $space-6;
+  gap: $space-4;
   width: 100%;
 }
 
@@ -104,7 +104,7 @@
 
 .fashion-gateway {
   display: grid;
-  gap: $space-6;
+  gap: $space-4;
   margin-top: $space-8;
 }
 
@@ -133,7 +133,15 @@
 
 @media (min-width: $bp-tablet) {
   .site-main {
-    padding-top: $space-24;
+    padding: $space-24 $space-6 $space-24;
+  }
+
+  .page--home {
+    gap: $space-16;
+  }
+
+  .home-hero {
+    padding-top: $space-8;
   }
 
   .home-illustration-slot {
@@ -142,6 +150,7 @@
 
   .section-grid,
   .fashion-gateway {
+    gap: $space-6;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

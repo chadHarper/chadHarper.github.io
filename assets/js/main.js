@@ -10,9 +10,12 @@
 
   const navToggle = document.querySelector('[data-nav-toggle]');
   const navPanel = document.querySelector('[data-nav-panel]');
+  const desktopNavMedia = window.matchMedia('(min-width: 768px)');
   let previousFocus = null;
 
-  function closeNav() {
+  function closeNav(options) {
+    const shouldRestoreFocus = !options || options.restoreFocus !== false;
+
     if (!navToggle || !navPanel) {
       return;
     }
@@ -21,10 +24,11 @@
     navPanel.hidden = true;
     document.body.classList.remove('nav-open');
 
-    if (previousFocus) {
+    if (shouldRestoreFocus && previousFocus) {
       previousFocus.focus();
-      previousFocus = null;
     }
+
+    previousFocus = null;
   }
 
   function openNav() {
@@ -85,6 +89,20 @@
         }
       }
     });
+
+    function syncNavToViewport(event) {
+      if (!event.matches) {
+        return;
+      }
+
+      closeNav({ restoreFocus: false });
+    }
+
+    if (desktopNavMedia.addEventListener) {
+      desktopNavMedia.addEventListener('change', syncNavToViewport);
+    } else if (desktopNavMedia.addListener) {
+      desktopNavMedia.addListener(syncNavToViewport);
+    }
   }
 
   document.querySelectorAll('[data-filter-group]').forEach(function (group) {

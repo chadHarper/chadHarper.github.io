@@ -4,13 +4,42 @@
     padding-right: $space-4;
   }
 
+  .filter-bar {
+    flex-wrap: nowrap;
+    margin-left: -$space-1;
+    margin-right: -$space-1;
+    overflow-x: auto;
+    padding: 0 $space-1 $space-2;
+    scrollbar-width: none;
+  }
+
+  .filter-bar::-webkit-scrollbar {
+    display: none;
+  }
+
   .section-card,
   .cv-summary__block {
     min-height: auto;
   }
 
-  .about-intro__image {
+  .about-intro__media {
     max-width: 22rem;
+  }
+
+  .about-intro__image {
+    max-width: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-footer__links {
+    flex-direction: column;
+    gap: $space-2;
+  }
+
+  .site-footer__links a + a::before {
+    content: none;
+    margin-right: 0;
   }
 }
 
