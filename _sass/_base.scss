@@ -22,11 +22,11 @@ body {
 
 body::before {
   background-image: $kraft-body-grain;
-  background-size: 220px 220px, 120px 120px;
+  background-size: 250px 250px, 140px 140px;
   content: "";
   inset: 0;
   mix-blend-mode: multiply;
-  opacity: 0.13;
+  opacity: 0.15;
   pointer-events: none;
   position: fixed;
   z-index: -1;
@@ -52,11 +52,11 @@ body::after {
 // Warm tone variation layer adds slight color shifts along crease lines.
 .site-main::before {
   background-image: $crumple-overlay;
-  background-size: 400px 400px, 400px 400px;
+  background-size: 360px 360px, 360px 360px;
   content: "";
   inset: 0;
-  mix-blend-mode: multiply;
-  opacity: 0.1;
+  mix-blend-mode: soft-light;
+  opacity: 0.07;
   pointer-events: none;
   position: absolute;
   z-index: 0;
@@ -68,7 +68,7 @@ body::after {
   }
 
   body::before {
-    opacity: 0.1;
+    opacity: 0.12;
   }
 
   body::after {
@@ -76,7 +76,7 @@ body::after {
   }
 
   .site-main::before {
-    opacity: 0.07;
+    opacity: 0.05;
   }
 }
 
