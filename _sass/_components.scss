@@ -146,13 +146,13 @@
 }
 
 .section-card::after {
-  background-image: $watercolor-grain;
-  background-size: 200px 200px;
+  background-image: $kraft-surface-grain;
+  background-size: 200px 200px, 110px 110px;
   border-radius: inherit;
   content: "";
   inset: 0;
   mix-blend-mode: multiply;
-  opacity: 0.10;
+  opacity: 0.12;
   pointer-events: none;
   position: absolute;
   transition: opacity 0.2s ease;
@@ -344,8 +344,8 @@
 .paper-ref {
   background:
     linear-gradient(160deg, rgba($bg-secondary, 0.9), rgba($bg-elevated, 0.96)),
-    $watercolor-grain;
-  background-size: auto, 200px 200px;
+    $kraft-surface-grain;
+  background-size: auto, 200px 200px, 110px 110px;
   border-left: 3px solid $accent-lavender;
   border-radius: 0 4px 4px 0;
   margin-bottom: $space-8;
@@ -423,8 +423,8 @@
 .cv-summary__block {
   background:
     linear-gradient(160deg, rgba($bg-secondary, 0.72), rgba($bg-elevated, 0.82)),
-    $watercolor-grain;
-  background-size: auto, 200px 200px;
+    $kraft-surface-grain;
+  background-size: auto, 200px 200px, 110px 110px;
   border: 1px solid $border-subtle;
   border-radius: 6px;
   padding: $space-6;
@@ -449,9 +449,9 @@
 .about-intro__image {
   background:
     linear-gradient(160deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0)),
-    $watercolor-grain,
+    $kraft-surface-grain,
     rgba($bg-secondary, 0.72);
-  background-size: auto, 200px 200px, auto;
+  background-size: auto, 200px 200px, 110px 110px, auto;
   border: 1px solid $border-subtle;
   border-radius: 6px;
   box-shadow: $shadow-soft;

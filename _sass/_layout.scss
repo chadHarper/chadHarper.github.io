@@ -92,8 +92,8 @@
 .empty-state {
   background:
     linear-gradient(145deg, rgba($bg-secondary, 0.74), rgba($bg-elevated, 0.92)),
-    $watercolor-grain;
-  background-size: auto, 200px 200px;
+    $kraft-surface-grain;
+  background-size: auto, 200px 200px, 110px 110px;
   border: 1px solid $border-subtle;
   border-radius: 6px;
   color: $text-secondary;
