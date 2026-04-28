@@ -10,8 +10,30 @@
 
   const navToggle = document.querySelector('[data-nav-toggle]');
   const navPanel = document.querySelector('[data-nav-panel]');
+  const navClose = document.querySelector('[data-nav-close]');
   const desktopNavMedia = window.matchMedia('(min-width: 768px)');
   let previousFocus = null;
+  let restoreFocusOnClose = true;
+
+  function syncNavState(isOpen) {
+    if (!navToggle) {
+      return;
+    }
+
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+    document.body.classList.toggle('nav-open', isOpen);
+  }
+
+  function finalizeNavClose() {
+    syncNavState(false);
+
+    if (restoreFocusOnClose && previousFocus) {
+      previousFocus.focus();
+    }
+
+    previousFocus = null;
+    restoreFocusOnClose = true;
+  }
 
   function closeNav(options) {
     const shouldRestoreFocus = !options || options.restoreFocus !== false;
@@ -20,15 +42,16 @@
       return;
     }
 
-    navToggle.setAttribute('aria-expanded', 'false');
-    navPanel.hidden = true;
-    document.body.classList.remove('nav-open');
+    restoreFocusOnClose = shouldRestoreFocus;
 
-    if (shouldRestoreFocus && previousFocus) {
-      previousFocus.focus();
+    if (typeof navPanel.close === 'function' && navPanel.open) {
+      navPanel.close();
+      return;
     }
 
-    previousFocus = null;
+    navPanel.hidden = true;
+    navPanel.removeAttribute('open');
+    finalizeNavClose();
   }
 
   function openNav() {
@@ -37,11 +60,16 @@
     }
 
     previousFocus = document.activeElement;
-    navToggle.setAttribute('aria-expanded', 'true');
-    navPanel.hidden = false;
-    document.body.classList.add('nav-open');
+    syncNavState(true);
 
-    const firstFocusable = navPanel.querySelector(focusableSelector);
+    if (typeof navPanel.showModal === 'function') {
+      navPanel.showModal();
+    } else {
+      navPanel.hidden = false;
+      navPanel.setAttribute('open', '');
+    }
+
+    const firstFocusable = navPanel.querySelector('[autofocus]') || navPanel.querySelector(focusableSelector);
     if (firstFocusable) {
       firstFocusable.focus();
     }
@@ -56,22 +84,32 @@
       }
     });
 
+    if (navClose) {
+      navClose.addEventListener('click', function () {
+        closeNav();
+      });
+    }
+
     navPanel.addEventListener('click', function (event) {
       if (event.target === navPanel) {
         closeNav();
       }
     });
 
+    navPanel.addEventListener('close', finalizeNavClose);
+
     navPanel.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', closeNav);
+      link.addEventListener('click', function () {
+        closeNav({ restoreFocus: false });
+      });
     });
 
     document.addEventListener('keydown', function (event) {
-      if (!navPanel.hidden && event.key === 'Escape') {
+      if (navPanel.open && event.key === 'Escape') {
         closeNav();
       }
 
-      if (!navPanel.hidden && event.key === 'Tab') {
+      if (navPanel.open && event.key === 'Tab' && typeof navPanel.showModal !== 'function') {
         const focusable = Array.from(navPanel.querySelectorAll(focusableSelector));
         if (focusable.length === 0) {
           return;

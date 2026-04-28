@@ -6,6 +6,7 @@
     type="button"
     aria-expanded="false"
     aria-controls="site-nav-panel"
+    aria-haspopup="dialog"
     data-nav-toggle
   >
     <span class="sr-only">Open navigation</span>
@@ -22,13 +23,19 @@
     <li><a class="nav__link" href="{{ '/about/' | relative_url }}"{% if page.section == "about" %} aria-current="page"{% endif %}>About</a></li>
   </ul>
 
-  <div class="nav-panel" id="site-nav-panel" hidden data-nav-panel>
+  <dialog class="nav-panel" id="site-nav-panel" data-nav-panel aria-label="Site navigation">
     <div class="nav-panel__inner">
+      <div class="nav-panel__header">
+        <p class="nav-panel__title">Navigation</p>
+        <button class="nav-panel__close" type="button" data-nav-close aria-label="Close navigation" autofocus>
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
       <a class="nav-panel__link" href="{{ '/research/' | relative_url }}"{% if page.section == "research" %} aria-current="page"{% endif %}>Research</a>
       <a class="nav-panel__link" href="{{ '/teaching/' | relative_url }}"{% if page.section == "teaching" %} aria-current="page"{% endif %}>Teaching</a>
       <a class="nav-panel__link" href="{{ '/fashion/' | relative_url }}"{% if page.section == "fashion" %} aria-current="page"{% endif %}>Fashion</a>
       <a class="nav-panel__link" href="{{ '/writing/' | relative_url }}"{% if page.section == "writing" %} aria-current="page"{% endif %}>Writing</a>
       <a class="nav-panel__link" href="{{ '/about/' | relative_url }}"{% if page.section == "about" %} aria-current="page"{% endif %}>About</a>
     </div>
-  </div>
+  </dialog>
 </nav>
