@@ -170,12 +170,22 @@
 }
 
 .section-card {
-  --card-outline: rgba(120, 110, 105, 0.18);
-  --card-outline-strong: rgba(120, 110, 105, 0.28);
-  background: $bg-secondary;
+  --card-outline: #{rgba($border-emphasis, 0.68)};
+  --card-outline-strong: #{rgba($accent-lavender, 0.84)};
+  --card-pool: #{rgba($accent-blush, 0.08)};
+  --card-stroke:
+    radial-gradient(136% 32% at 50% 102%, rgba(140, 112, 94, 0.16) 0, rgba(140, 112, 94, 0.06) 28%, rgba(140, 112, 94, 0) 62%),
+    radial-gradient(20% 106% at 0% 52%, rgba(255, 255, 255, 0.09) 0, rgba(255, 255, 255, 0) 70%),
+    radial-gradient(20% 106% at 100% 50%, rgba(112, 88, 78, 0.12) 0, rgba(112, 88, 78, 0) 68%);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.08) 48%, rgba(255, 255, 255, 0)),
+    $bg-secondary;
   border: 1px solid var(--card-outline);
-  border-radius: 12px;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.26) inset;
+  border-radius: 6px;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.32) inset,
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06),
+    inset 0 -22px 34px var(--card-pool);
   color: inherit;
   display: block;
   isolation: isolate;
@@ -184,17 +194,19 @@
   padding: $space-6;
   position: relative;
   text-decoration: none;
-  transition: transform 180ms ease, border-color 180ms ease, filter 180ms ease;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
 .section-card::before {
   background:
+    var(--card-stroke),
     var(--card-wash),
-    radial-gradient(circle at 16% 10%, rgba(255, 255, 255, 0.1) 0, rgba(255, 255, 255, 0) 60%);
+    radial-gradient(circle at 18% 14%, rgba(255, 255, 255, 0.2), transparent 26%);
+  background-blend-mode: multiply, normal, screen;
   border-radius: inherit;
   content: "";
   inset: 0;
-  opacity: 1;
+  opacity: 0.98;
   pointer-events: none;
   position: absolute;
   z-index: 0;
@@ -222,36 +234,72 @@
 .section-card:hover,
 .section-card:focus-visible {
   border-color: var(--card-outline-strong);
-  filter: saturate(1.03) contrast(1.01);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.32) inset,
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06),
+    inset 0 -22px 34px var(--card-pool),
+    $shadow-lift;
   transform: translateY(-2px);
 }
 
 .section-card--research {
   --card-outline: #{rgba($accent-lavender, 0.52)};
   --card-outline-strong: #{rgba($accent-lavender-hover, 0.84)};
+  --card-pool: #{rgba($accent-lavender, 0.16)};
+  --card-stroke:
+    radial-gradient(138% 34% at 50% 102%, rgba(138, 118, 163, 0.3) 0, rgba(138, 118, 163, 0.12) 28%, rgba(138, 118, 163, 0) 62%),
+    radial-gradient(22% 108% at 100% 48%, rgba(128, 108, 150, 0.14) 0, rgba(128, 108, 150, 0) 68%),
+    radial-gradient(20% 106% at 0% 52%, rgba(255, 255, 255, 0.09) 0, rgba(255, 255, 255, 0) 70%);
   --card-wash:
-    linear-gradient(to bottom, #F1ECEE 0%, #EAE1E7 45%, #D7CAE8 78%, #CBBCE3 100%);
+    radial-gradient(132% 94% at 16% 100%, rgba(184, 169, 201, 0.52) 0, rgba(184, 169, 201, 0.32) 24%, rgba(184, 169, 201, 0.12) 48%, rgba(184, 169, 201, 0) 74%),
+    radial-gradient(68% 58% at 82% 22%, rgba(255, 255, 255, 0.34) 0, rgba(255, 255, 255, 0) 80%),
+    radial-gradient(88% 60% at 64% 72%, rgba(212, 181, 168, 0.06) 0, rgba(212, 181, 168, 0) 70%);
 }
 
 .section-card--teaching {
-  --card-outline: rgba(168, 189, 181, 0.30);
-  --card-outline-strong: rgba(168, 189, 181, 0.40);
+  --card-outline: #{rgba($accent-pine, 0.54)};
+  --card-outline-strong: #{rgba($accent-pine, 0.84)};
+  --card-pool: #{rgba($accent-moss, 0.24)};
+  --card-stroke:
+    radial-gradient(144% 34% at 50% 102%, rgba($accent-pine, 0.34) 0, rgba($accent-pine, 0.16) 28%, rgba($accent-pine, 0) 62%),
+    radial-gradient(22% 110% at 100% 50%, rgba($accent-pine, 0.18) 0, rgba($accent-pine, 0) 68%),
+    radial-gradient(20% 108% at 0% 52%, rgba(255, 255, 255, 0.1) 0, rgba(255, 255, 255, 0) 72%);
   --card-wash:
-    linear-gradient(to bottom, #DDE6DD 0%, #D4E0D5 38%, #C8D7CB 70%, #BED0C3 100%);
+    radial-gradient(138% 112% at 68% 54%, rgba($accent-moss, 0.72) 0, rgba($accent-moss, 0.44) 34%, rgba($accent-moss, 0.18) 64%, rgba($accent-moss, 0) 88%),
+    radial-gradient(82% 72% at 18% 18%, rgba(240, 247, 243, 0.34) 0, rgba(240, 247, 243, 0) 74%),
+    radial-gradient(96% 76% at 86% 90%, rgba($accent-sage, 0.28) 0, rgba($accent-sage, 0) 74%),
+    radial-gradient(74% 62% at 28% 88%, rgba($accent-pine, 0.18) 0, rgba($accent-pine, 0) 72%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0));
 }
 
 .section-card--fashion {
-  --card-outline: rgba(196, 162, 138, 0.30);
-  --card-outline-strong: rgba(196, 162, 138, 0.40);
+  --card-outline: #{rgba($accent-coral, 0.58)};
+  --card-outline-strong: #{rgba($accent-sunset, 0.88)};
+  --card-pool: #{rgba($accent-sunset, 0.28)};
+  --card-stroke:
+    radial-gradient(144% 36% at 50% 102%, rgba($accent-sunset, 0.36) 0, rgba($accent-sunset, 0.18) 28%, rgba($accent-sunset, 0) 62%),
+    radial-gradient(22% 108% at 100% 52%, rgba(155, 137, 179, 0.2) 0, rgba(155, 137, 179, 0) 68%),
+    radial-gradient(18% 108% at 0% 52%, rgba(255, 255, 255, 0.1) 0, rgba(255, 255, 255, 0) 72%);
   --card-wash:
-    linear-gradient(to bottom, #F2D8CF 0%, #EBCBBF 28%, #E7D7CC 58%, #DCC8D6 82%, #CDBCDD 100%);
+    radial-gradient(122% 96% at 16% 22%, rgba($accent-sunset, 0.88) 0, rgba($accent-sunset, 0.52) 28%, rgba($accent-sunset, 0.18) 58%, rgba($accent-sunset, 0) 82%),
+    radial-gradient(136% 100% at 10% 100%, rgba($accent-coral, 0.84) 0, rgba($accent-coral, 0.48) 28%, rgba($accent-coral, 0.16) 56%, rgba($accent-coral, 0) 80%),
+    radial-gradient(78% 60% at 56% 16%, rgba($accent-apricot, 0.58) 0, rgba($accent-apricot, 0.22) 40%, rgba($accent-apricot, 0) 74%),
+    radial-gradient(42% 34% at 92% 90%, rgba($accent-lavender, 0.62) 0, rgba($accent-lavender, 0.28) 30%, rgba($accent-lavender, 0) 60%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0));
 }
 
 .section-card--writing {
-  --card-outline: rgba(155, 137, 179, 0.32);
-  --card-outline-strong: rgba(155, 137, 179, 0.42);
+  --card-outline: #{rgba($accent-lavender-hover, 0.56)};
+  --card-outline-strong: #{rgba($accent-lavender-hover, 0.88)};
+  --card-pool: #{rgba($accent-lavender, 0.24)};
+  --card-stroke:
+    radial-gradient(140% 34% at 50% 102%, rgba(136, 112, 164, 0.34) 0, rgba(136, 112, 164, 0.16) 28%, rgba(136, 112, 164, 0) 62%),
+    radial-gradient(22% 108% at 100% 50%, rgba(126, 103, 154, 0.18) 0, rgba(126, 103, 154, 0) 68%),
+    radial-gradient(20% 108% at 0% 52%, rgba(255, 255, 255, 0.1) 0, rgba(255, 255, 255, 0) 72%);
   --card-wash:
-    linear-gradient(to bottom, #DDD3E6 0%, #D4C7E2 36%, #CDBEDF 68%, #C2B0D7 100%);
+    radial-gradient(126% 96% at 74% 64%, rgba(184, 169, 201, 0.56) 0, rgba(184, 169, 201, 0.34) 36%, rgba(184, 169, 201, 0.13) 62%, rgba(184, 169, 201, 0) 88%),
+    radial-gradient(72% 56% at 18% 18%, rgba(255, 255, 255, 0.28) 0, rgba(255, 255, 255, 0) 76%),
+    radial-gradient(62% 48% at 18% 88%, rgba(184, 169, 201, 0.18) 0, rgba(184, 169, 201, 0) 74%);
 }
 
 .section-card__title {
@@ -260,7 +308,7 @@
 }
 
 .section-card__desc {
-  color: #5B5550;
+  color: $text-secondary;
   margin: 0;
 }
 
