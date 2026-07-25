@@ -4,24 +4,13 @@ layout: default
 {% if page.url == "/" %}
   <article class="page page--home">
     <section class="home-hero">
-      <p class="home-kicker">Physics, teaching, writing, and fashion criticism</p>
+      <p class="home-kicker">Physics, teaching, and writing</p>
       <h1 class="home-title">{{ site.title | upcase }}</h1>
       {% comment %}Phase 2 illustration slot.{% endcomment %}
       <div class="home-illustration-slot" aria-hidden="true"></div>
       <div class="home-bio prose-flow">
         {{ content }}
       </div>
-    </section>
-
-    <section class="section-grid" aria-label="Site sections">
-      {% for section in site.data.sections %}
-        {% include section-card.html
-          name=section.name
-          url=section.url
-          description=section.description
-          accent=section.accent
-        %}
-      {% endfor %}
     </section>
   </article>
 {% else %}

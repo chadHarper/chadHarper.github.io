@@ -8,13 +8,7 @@
   description: "Courses, teaching experience, and materials."
   accent: "teaching"
 
-- name: "Fashion"
-  url: "/fashion/"
-  description: "Criticism, photoshoots, and style culture."
-  accent: "fashion"
-
 - name: "Writing"
   url: "/writing/"
   description: "Essays, technical notes, and everything else."
   accent: "writing"
-
