@@ -440,6 +440,139 @@
   margin: $space-3 0 0;
 }
 
+.teaching-groups {
+  display: grid;
+  gap: $space-8;
+  margin-top: $space-12;
+}
+
+.teaching-role {
+  background:
+    linear-gradient(145deg, rgba($bg-secondary, 0.9), rgba($bg-elevated, 0.72)),
+    $kraft-surface-grain;
+  background-size: auto, 200px 200px, 110px 110px;
+  border: 1px solid $border-subtle;
+  border-radius: 8px;
+  box-shadow: $shadow-soft;
+  overflow: hidden;
+  padding: $space-8;
+  position: relative;
+}
+
+.teaching-role::before {
+  content: "";
+  height: 4px;
+  inset: 0 0 auto;
+  position: absolute;
+}
+
+.teaching-role--berkeley::before {
+  background: linear-gradient(90deg, $accent-lavender-hover, $accent-lavender, rgba($accent-lavender, 0.2));
+}
+
+.teaching-role--instructor::before {
+  background: linear-gradient(90deg, $accent-pine, $accent-moss, rgba($accent-sage, 0.22));
+}
+
+.teaching-role__header {
+  margin-bottom: $space-8;
+}
+
+.teaching-role__header h2 {
+  font-size: clamp(1.5rem, 4vw, $text-2xl);
+  margin: 0;
+}
+
+.teaching-role__eyebrow {
+  color: $text-secondary;
+  font-family: $font-sans;
+  font-size: $text-xs;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin: 0 0 $space-2;
+  text-transform: uppercase;
+}
+
+.teaching-institution + .teaching-institution {
+  border-top: 1px solid $border-subtle;
+  margin-top: $space-8;
+  padding-top: $space-8;
+}
+
+.teaching-institution__name {
+  color: $text-secondary;
+  font-size: $text-base;
+  letter-spacing: 0.04em;
+  margin: 0 0 $space-4 !important;
+  text-transform: uppercase;
+}
+
+.teaching-course-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.teaching-course {
+  display: grid;
+  gap: $space-6;
+  grid-template-columns: minmax(7rem, 0.22fr) 1fr;
+  padding: $space-6 0;
+}
+
+.teaching-course + .teaching-course {
+  border-top: 1px solid rgba($border-subtle, 0.85);
+}
+
+.teaching-course__number {
+  color: $accent-lavender-hover;
+  font-family: $font-sans;
+  font-size: $text-sm;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin: 0;
+  padding-top: 0.2rem;
+}
+
+.teaching-role--instructor .teaching-course__number {
+  color: $accent-pine;
+}
+
+.teaching-course__body h3 {
+  font-size: $text-lg;
+  margin: 0;
+}
+
+.teaching-course__link {
+  color: $text-secondary;
+  display: inline-block;
+  font-family: $font-sans;
+  font-size: $text-sm;
+  margin-top: $space-2;
+  text-decoration-color: rgba($accent-lavender-hover, 0.55);
+  text-underline-offset: 0.2em;
+}
+
+.teaching-course__link:hover,
+.teaching-course__link:focus-visible {
+  color: $accent-lavender-hover;
+}
+
+.teaching-course__credit {
+  color: $accent-pine;
+  font-family: $font-sans;
+  font-size: $text-sm;
+  font-weight: 600;
+  margin: $space-3 0 0;
+}
+
+.teaching-course__description {
+  color: $text-secondary;
+  font-size: $text-base;
+  line-height: 1.7;
+  margin: $space-3 0 0;
+  max-width: 48rem;
+}
+
 .post-card--image .post-card__link {
   display: grid;
   gap: $space-4;

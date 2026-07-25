@@ -38,6 +38,20 @@
     height: 72vh;
     min-height: 28rem;
   }
+
+  .teaching-role {
+    padding: $space-6;
+  }
+
+  .teaching-course {
+    gap: $space-2;
+    grid-template-columns: 1fr;
+    padding: $space-6 0;
+  }
+
+  .teaching-course__number {
+    padding-top: 0;
+  }
 }
 
 @media (max-width: 420px) {
