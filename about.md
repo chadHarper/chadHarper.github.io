@@ -5,7 +5,7 @@ description: "Background, interests, and CV access for Chad Harper."
 section: "about"
 permalink: /about/
 wide_body: true
-header_action_url: "/cv/"
+header_action_url: "/cv/?view=web"
 header_action_label: "View CV"
 ---
 <section class="about-intro">
