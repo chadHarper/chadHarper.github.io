@@ -1,11 +1,12 @@
 ---
 layout: page
 title: "About Me"
-description: "Background, interests, and downloadable CV for Chad Harper."
+description: "Background, interests, and CV access for Chad Harper."
 section: "about"
 permalink: /about/
 wide_body: true
-cv_pdf: "/assets/pdf/cv.pdf"
+header_action_url: "/cv/"
+header_action_label: "View CV"
 ---
 <section class="about-intro">
   <figure class="about-intro__media">

@@ -18,7 +18,9 @@ layout: default
     <div class="content-column">
       <header class="page-header">
         <h1 class="page-title">{{ page.title }}</h1>
-        {% if page.cv_pdf %}
+        {% if page.header_action_url %}
+          <a class="download-btn" href="{{ page.header_action_url | relative_url }}">{{ page.header_action_label | default: "Open" }}</a>
+        {% elsif page.cv_pdf %}
           <a class="download-btn" href="{{ page.cv_pdf | relative_url }}">Download CV ↓</a>
         {% endif %}
       </header>

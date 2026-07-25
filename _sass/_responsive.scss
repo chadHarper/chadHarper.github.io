@@ -29,6 +29,15 @@
   .about-intro__image {
     max-width: none;
   }
+
+  .cv-viewer__frame {
+    padding: $space-2;
+  }
+
+  .cv-viewer__frame iframe {
+    height: 72vh;
+    min-height: 28rem;
+  }
 }
 
 @media (max-width: 420px) {
