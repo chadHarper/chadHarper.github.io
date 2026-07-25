@@ -21,7 +21,7 @@ layout: default
         {% if page.header_action_url %}
           <a class="download-btn" href="{{ page.header_action_url | relative_url }}">{{ page.header_action_label | default: "Open" }}</a>
         {% elsif page.cv_pdf %}
-          <a class="download-btn" href="{{ page.cv_pdf | relative_url }}">Download CV ↓</a>
+          <a class="download-btn" href="{{ page.cv_pdf | relative_url }}" download>Download CV</a>
         {% endif %}
       </header>
       <div class="page-body prose-flow{% if page.wide_body %} page-body--wide{% endif %}">

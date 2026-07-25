@@ -18,6 +18,6 @@ cv_pdf: "/assets/pdf/cv.pdf"
     ></iframe>
   </div>
   <p class="cv-viewer__fallback">
-    If the embedded PDF does not load on your device, <a href="{{ page.cv_pdf | relative_url }}">open the CV directly</a>.
+    If the embedded PDF does not load on your device, <a href="{{ page.cv_pdf | relative_url }}" download>download the CV directly</a>.
   </p>
 </section>
