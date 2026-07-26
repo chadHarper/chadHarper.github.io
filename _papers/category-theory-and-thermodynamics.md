@@ -1,5 +1,5 @@
 ---
-title: "How Can Thermodynamic Systems Be Composed?"
+title: "How to Apply Category Theory to Thermodynamics"
 description: "An accessible guide to compositional thermostatics, entropy, and the role of category theory in describing systems with boundaries."
 paper_title: "How to Apply Category Theory to Thermodynamics"
 paper_status: "Published"

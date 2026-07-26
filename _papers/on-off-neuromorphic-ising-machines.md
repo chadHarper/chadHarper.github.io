@@ -1,5 +1,5 @@
 ---
-title: "Can Spiking Neurons Search Difficult Optimization Landscapes?"
+title: "ON-OFF neuromorphic ISING machines using Fowler-Nordheim annealers"
 description: "A guide to NeuroSA, an asynchronous neuromorphic architecture for simulated annealing on combinatorial optimization problems."
 paper_title: "ON-OFF neuromorphic ISING machines using Fowler-Nordheim annealers"
 paper_status: "Published"
