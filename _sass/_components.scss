@@ -398,6 +398,99 @@
   padding: $space-6 0;
 }
 
+.page--research .content-column {
+  max-width: 58rem;
+}
+
+.research-intro {
+  color: $text-secondary;
+  font-size: $text-lg;
+  line-height: 1.75;
+  max-width: 42rem;
+}
+
+.research-section {
+  margin-top: $space-16;
+}
+
+.research-section__header {
+  border-bottom: 1px solid $border-emphasis;
+  margin-bottom: $space-2;
+  padding-bottom: $space-4;
+}
+
+.research-section__header h2 {
+  font-size: $text-2xl;
+  margin: 0;
+}
+
+.research-section__eyebrow,
+.research-entry__status {
+  color: $text-tertiary;
+  font-family: $font-sans;
+  font-size: $text-xs;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  margin: 0 0 $space-2;
+  text-transform: uppercase;
+}
+
+.research-longform {
+  margin-top: $space-16;
+  max-width: 48rem;
+}
+
+.research-longform > h2 {
+  border-bottom: 1px solid $border-emphasis;
+  font-size: $text-2xl;
+  margin: $space-16 0 $space-2;
+  padding-bottom: $space-4;
+}
+
+.research-entry {
+  border-bottom: 1px solid $border-subtle;
+  padding: $space-8 0;
+}
+
+.research-entry h3 {
+  font-size: $text-xl;
+  line-height: 1.35;
+  margin: 0 0 $space-4;
+}
+
+.research-entry--manuscript > p:not(.research-entry__status) {
+  color: $text-secondary;
+}
+
+.research-question-grid {
+  display: grid;
+  gap: $space-4;
+  margin-top: $space-6;
+}
+
+.research-entry--question {
+  background:
+    linear-gradient(150deg, rgba($bg-elevated, 0.76), rgba($bg-secondary, 0.54)),
+    $kraft-surface-grain;
+  background-size: auto, 200px 200px, 110px 110px;
+  border: 1px solid $border-subtle;
+  border-radius: 6px;
+  box-shadow: $shadow-soft;
+  padding: $space-6;
+}
+
+.research-entry--question h3 {
+  font-size: $text-lg;
+  margin-bottom: $space-3;
+}
+
+.research-entry--question p {
+  color: $text-secondary;
+  font-size: $text-sm;
+  line-height: 1.7;
+  margin: 0;
+}
+
 .post-card__link,
 .course-card__link,
 .paper-card__link {
@@ -608,6 +701,10 @@
   color: $text-primary;
 }
 
+.paper-card > .badge--status {
+  margin-top: $space-1;
+}
+
 .badge--teaching-assistant {
   background: $bg-secondary;
 }
@@ -651,6 +748,17 @@
   font-family: $font-sans;
   font-size: $text-xs;
   margin: 0 0 $space-2;
+}
+
+.paper-ref__note {
+  color: $text-secondary;
+  font-family: $font-sans;
+  font-size: $text-sm;
+  margin: $space-2 0 0;
+}
+
+.paper-ref--submitted {
+  border-left-color: $accent-sage;
 }
 
 .download-btn {

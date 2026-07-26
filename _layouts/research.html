@@ -6,20 +6,40 @@ layout: default
     <header class="page-header">
       <h1 class="page-title">{{ page.title }}</h1>
     </header>
-    <div class="page-body prose-flow">
-      {{ content }}
+    <div class="research-intro prose-flow">
+      {{ page.intro | markdownify }}
     </div>
-    <hr class="page-divider">
-    <section class="listing-stack" aria-label="Research explainers">
-      {% assign papers = site.papers | sort: "date" | reverse %}
-      {% if papers.size > 0 %}
-        {% for paper in papers %}
+
+    {% assign papers = site.papers | sort: "research_order" %}
+    {% assign published = papers | where: "disclosure_class", "published" %}
+    {% assign submitted = papers | where: "disclosure_class", "submitted" %}
+
+    <section class="research-section" aria-labelledby="published-heading">
+      <header class="research-section__header">
+        <p class="research-section__eyebrow">Public work</p>
+        <h2 id="published-heading">Published</h2>
+      </header>
+      <div class="listing-stack">
+        {% for paper in published %}
           {% include paper-card.html paper=paper %}
         {% endfor %}
-      {% else %}
-        <p class="empty-state">Paper explainers will appear here as they are ready.</p>
-      {% endif %}
+      </div>
     </section>
+
+    <section class="research-section" aria-labelledby="submitted-heading">
+      <header class="research-section__header">
+        <p class="research-section__eyebrow">In review</p>
+        <h2 id="submitted-heading">Submitted</h2>
+      </header>
+      <div class="listing-stack">
+        {% for paper in submitted %}
+          {% include paper-card.html paper=paper %}
+        {% endfor %}
+      </div>
+    </section>
+
+    <div class="research-longform prose-flow">
+      {{ content }}
+    </div>
   </div>
 </article>
-

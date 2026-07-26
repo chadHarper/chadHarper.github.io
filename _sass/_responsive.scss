@@ -52,6 +52,29 @@
   .teaching-course__number {
     padding-top: 0;
   }
+
+  .research-intro {
+    font-size: $text-base;
+  }
+
+  .research-section,
+  .research-longform {
+    margin-top: $space-12;
+  }
+
+  .research-longform > h2 {
+    margin-top: $space-12;
+  }
+
+  .research-entry {
+    padding: $space-6 0;
+  }
+}
+
+@media (min-width: $bp-tablet) {
+  .research-question-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 420px) {

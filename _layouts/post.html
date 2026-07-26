@@ -27,7 +27,9 @@ layout: default
     <header class="post-header">
       <h1 class="post-title">{{ page.title }}</h1>
       <div class="post-meta">
-        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+        {% if page.display_date %}
+          <time datetime="{{ page.display_date | date_to_xmlschema }}">{{ page.display_date | date: "%B %d, %Y" }}</time>
+        {% endif %}
         {% if page.category %}
           <span class="badge">
             {% if page.category == "ethics-and-ai" %}
@@ -41,18 +43,24 @@ layout: default
           <span class="badge badge--{{ page.type }}">{{ page.type | capitalize }}</span>
         {% endif %}
         {% if page.paper_status %}
-          <span class="badge badge--status">{{ page.paper_status | replace: "-", " " | capitalize }}</span>
+          <span class="badge badge--status">{{ page.paper_status }}</span>
         {% endif %}
       </div>
     </header>
 
     {% if page.collection == 'papers' %}
-      <aside class="paper-ref">
+      <aside class="paper-ref paper-ref--{{ page.disclosure_class }}">
         <p class="paper-ref__title">{{ page.paper_title }}</p>
         {% if page.journal %}
           <p class="paper-ref__journal">{{ page.journal }}</p>
         {% endif %}
-        <a href="{{ page.paper_url }}" class="paper-ref__link" target="_blank" rel="noopener">Read the paper →</a>
+        {% if page.disclosure_class == 'published' and page.paper_url %}
+          <a href="{{ page.paper_url }}" class="paper-ref__link" target="_blank" rel="noopener">{{ page.paper_action_label | default: "Read the public work" }} →</a>
+        {% elsif page.disclosure_class == 'published' and page.pdf_viewer_url %}
+          <a href="{{ page.pdf_viewer_url | relative_url }}" class="paper-ref__link">{{ page.paper_action_label | default: "View PDF" }} →</a>
+        {% else %}
+          <p class="paper-ref__note">This explainer discusses submitted work. The manuscript is not publicly available.</p>
+        {% endif %}
       </aside>
     {% endif %}
 
