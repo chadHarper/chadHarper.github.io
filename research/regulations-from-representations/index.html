@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How Can Algorithmic Audits Compare Less Discriminatory Alternatives? | Chad Harper</title>
+  <meta name="description" content="Background on disparate impact, modern predictive systems, and a submitted proposal for documenting tradeoffs before deployment.">
+  <meta name="theme-color" content="#F5F0EB">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=JetBrains+Mono:wght@400&family=Literata:opsz,wght@7..72,400;7..72,700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-icon-152x152.png">
+  <link rel="shortcut icon" href="/assets/faviconOb.ico">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>How Can Algorithmic Audits Compare Less Discriminatory Alternatives? | Chad Harper</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="How Can Algorithmic Audits Compare Less Discriminatory Alternatives?" />
+<meta name="author" content="Chad Harper" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Background on disparate impact, modern predictive systems, and a submitted proposal for documenting tradeoffs before deployment." />
+<meta name="twitter:description" property="og:description" content="Background on disparate impact, modern predictive systems, and a submitted proposal for documenting tradeoffs before deployment." />
+<link rel="canonical" href="https://chadharper.github.io/research/regulations-from-representations/" />
+<meta property="og:url" content="https://chadharper.github.io/research/regulations-from-representations/" />
+<meta property="og:site_name" content="Chad Harper" />
+<meta property="og:image" content="https://chadharper.github.io/assets/img/headshot.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-25T22:21:59-07:00" />
+<meta property="article:modified_time" content="2026-07-25T22:21:59-07:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://chadharper.github.io/assets/img/headshot.jpg" />
+<meta name="twitter:title" content="How Can Algorithmic Audits Compare Less Discriminatory Alternatives?" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Chad Harper"},"dateModified":"2026-07-25T22:21:59-07:00","datePublished":"2026-07-25T22:21:59-07:00","description":"Background on disparate impact, modern predictive systems, and a submitted proposal for documenting tradeoffs before deployment.","headline":"How Can Algorithmic Audits Compare Less Discriminatory Alternatives?","image":"https://chadharper.github.io/assets/img/headshot.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://chadharper.github.io/research/regulations-from-representations/"},"url":"https://chadharper.github.io/research/regulations-from-representations/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+
+
+    
+  
+</head>
+
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+  <nav class="nav" aria-label="Main navigation">
+  <a class="nav__home" href="/">CH</a>
+
+  <button
+    class="nav__toggle"
+    type="button"
+    aria-expanded="false"
+    aria-controls="site-nav-panel"
+    aria-haspopup="dialog"
+    data-nav-toggle
+  >
+    <span class="sr-only">Open navigation</span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <ul class="nav__links" data-nav-desktop>
+    <li><a class="nav__link" href="/research/" aria-current="page">Research</a></li>
+    <li><a class="nav__link" href="/teaching/">Teaching</a></li>
+    <li><a class="nav__link" href="/writing/">Writing</a></li>
+    <li><a class="nav__link" href="/about/">About</a></li>
+  </ul>
+
+  <dialog class="nav-panel" id="site-nav-panel" data-nav-panel aria-label="Site navigation">
+    <div class="nav-panel__inner">
+      <div class="nav-panel__header">
+        <p class="nav-panel__title">Navigation</p>
+        <button class="nav-panel__close" type="button" data-nav-close aria-label="Close navigation" autofocus>
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <a class="nav-panel__link" href="/research/" aria-current="page">Research</a>
+      <a class="nav-panel__link" href="/teaching/">Teaching</a>
+      <a class="nav-panel__link" href="/writing/">Writing</a>
+      <a class="nav-panel__link" href="/about/">About</a>
+    </div>
+  </dialog>
+</nav>
+
+</header>
+
+      <main id="main" class="site-main">
+        
+
+
+
+
+
+
+
+<article class="post-page">
+  <div class="content-column">
+    <header class="post-header">
+      <h1 class="post-title">How Can Algorithmic Audits Compare Less Discriminatory Alternatives?</h1>
+      <div class="post-meta">
+        
+        
+        
+        
+          <span class="badge badge--status">Submitted</span>
+        
+      </div>
+    </header>
+
+    
+      <aside class="paper-ref paper-ref--submitted">
+        <p class="paper-ref__title">Regulations from Representations: Information Geometry as a Framework for Less Discriminatory Algorithms</p>
+        
+        
+          <p class="paper-ref__note">This explainer discusses submitted work. The manuscript is not publicly available.</p>
+        
+      </aside>
+    
+
+    
+
+    <div class="post-body prose-flow">
+      <p>An employment rule can be written in neutral terms and still burden groups differently. United States employment discrimination law recognizes this through the doctrine of disparate impact. Under Title VII, a selection practice that produces a significant adverse impact may require justification as job-related and consistent with business necessity. Even then, the availability of a less discriminatory alternative can matter.</p>
+
+<p>This legal structure creates a comparison problem. It asks whether another practice could serve the employer's legitimate need while reducing discriminatory effects. For a conventional test or screening rule, alternatives may be concrete enough to identify and evaluate. A modern predictive model complicates the picture because it can encode thousands or millions of interacting parameters.</p>
+
+<p>Transformer models make the difficulty especially vivid. These systems learn distributed representations, meaning that a concept is generally expressed through patterns across many internal coordinates rather than stored in one clearly labeled location. The model's behavior can change when its representation is altered, but a change intended to reduce one disparity may also affect accuracy or disrupt other useful distinctions.</p>
+
+<p>Auditing adds another layer. A post-deployment audit can reveal patterns after a system has already influenced decisions. A pre-deployment audit instead asks developers and decision-makers to document expected behavior before use. This can make assumptions and tradeoffs visible at a point when changing the system is still possible.</p>
+
+<p>The submitted paper, written with a collaborator, connects this audit problem to the legal idea of less discriminatory alternatives. Its abstract proposes an "LDA frontier," a conditional pre-deployment audit artifact. At a high level, the frontier records relationships among predictive accuracy, measured disparity, and disruption away from the intended target as a target concept is varied.</p>
+
+<p>A frontier is a useful form of evidence because it replaces a single performance number with a structured comparison. In many technical fields, a frontier marks options for which improving one objective requires giving up something on another. Displaying such tradeoffs does not decide which option should be chosen. It can, however, show whether a claimed constraint is fixed or whether alternative configurations deserve consideration.</p>
+
+<p>The word "conditional" is important. Any audit result depends on prior choices: the task definition, dataset, affected population, protected groups, performance measure, disparity measure, and acceptable forms of change. The artifact described in the abstract should therefore be read within specified conditions rather than as a universal certificate.</p>
+
+<p>Information geometry supplies the paper's broad mathematical setting. It studies spaces of probability distributions using geometric concepts. For learned representations, a geometric view can provide language for comparing changes in model behavior and for tracing tradeoffs across a family of alternatives. The submitted work argues at the abstract level that this structure may help turn the less-discriminatory-alternative concept into usable compliance infrastructure for transformer systems.</p>
+
+<p>That claim remains carefully bounded. A technical artifact cannot determine legal compliance on its own. Law depends on facts, institutional responsibilities, burdens of proof, and judicial interpretation. Nor can a frontier settle which harms count, whose interests should receive priority, or whether an automated system should be deployed at all.</p>
+
+<p>Its potential contribution is narrower and practical: organizing evidence about available alternatives before a high-stakes model is used. Such evidence could support clearer conversations among developers, employers, auditors, lawyers, and affected people. It could also make it harder to present a single model configuration as inevitable when nearby alternatives have meaningfully different consequences.</p>
+
+<p>The larger research question concerns the relationship between representations and regulation. Modern models operate through internal structures that are difficult to inspect, while legal standards require comparisons that can be explained and contested. Building a credible bridge between the two requires mathematical care, legal humility, and documentation that exposes assumptions instead of concealing them.</p>
+
+    </div>
+
+    <nav class="back-link" aria-label="Back navigation">
+      <a href="/research/">← Back to Research</a>
+    </nav>
+  </div>
+</article>
+
+      </main>
+      <footer class="site-footer">
+  <div class="site-footer__links" aria-label="Footer links">
+    <a href="https://github.com/chadHarper" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.linkedin.com/in/chad-harper-91b785b9/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+  <p class="site-footer__copyright">© 2026 Chad Harper</p>
+</footer>
+
+    </div>
+    <script defer src="/assets/js/main.js"></script>
+  </body>
+</html>

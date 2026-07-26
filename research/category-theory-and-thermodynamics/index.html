@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How Can Thermodynamic Systems Be Composed? | Chad Harper</title>
+  <meta name="description" content="An accessible guide to compositional thermostatics, entropy, and the role of category theory in describing systems with boundaries.">
+  <meta name="theme-color" content="#F5F0EB">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=JetBrains+Mono:wght@400&family=Literata:opsz,wght@7..72,400;7..72,700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-icon-152x152.png">
+  <link rel="shortcut icon" href="/assets/faviconOb.ico">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>How Can Thermodynamic Systems Be Composed? | Chad Harper</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="How Can Thermodynamic Systems Be Composed?" />
+<meta name="author" content="Chad Harper" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An accessible guide to compositional thermostatics, entropy, and the role of category theory in describing systems with boundaries." />
+<meta name="twitter:description" property="og:description" content="An accessible guide to compositional thermostatics, entropy, and the role of category theory in describing systems with boundaries." />
+<link rel="canonical" href="https://chadharper.github.io/research/category-theory-and-thermodynamics/" />
+<meta property="og:url" content="https://chadharper.github.io/research/category-theory-and-thermodynamics/" />
+<meta property="og:site_name" content="Chad Harper" />
+<meta property="og:image" content="https://chadharper.github.io/assets/img/headshot.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-25T22:21:59-07:00" />
+<meta property="article:modified_time" content="2026-07-25T22:21:59-07:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://chadharper.github.io/assets/img/headshot.jpg" />
+<meta name="twitter:title" content="How Can Thermodynamic Systems Be Composed?" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Chad Harper"},"dateModified":"2026-07-25T22:21:59-07:00","datePublished":"2026-07-25T22:21:59-07:00","description":"An accessible guide to compositional thermostatics, entropy, and the role of category theory in describing systems with boundaries.","headline":"How Can Thermodynamic Systems Be Composed?","image":"https://chadharper.github.io/assets/img/headshot.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://chadharper.github.io/research/category-theory-and-thermodynamics/"},"url":"https://chadharper.github.io/research/category-theory-and-thermodynamics/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+
+
+    
+  
+</head>
+
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+  <nav class="nav" aria-label="Main navigation">
+  <a class="nav__home" href="/">CH</a>
+
+  <button
+    class="nav__toggle"
+    type="button"
+    aria-expanded="false"
+    aria-controls="site-nav-panel"
+    aria-haspopup="dialog"
+    data-nav-toggle
+  >
+    <span class="sr-only">Open navigation</span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <ul class="nav__links" data-nav-desktop>
+    <li><a class="nav__link" href="/research/" aria-current="page">Research</a></li>
+    <li><a class="nav__link" href="/teaching/">Teaching</a></li>
+    <li><a class="nav__link" href="/writing/">Writing</a></li>
+    <li><a class="nav__link" href="/about/">About</a></li>
+  </ul>
+
+  <dialog class="nav-panel" id="site-nav-panel" data-nav-panel aria-label="Site navigation">
+    <div class="nav-panel__inner">
+      <div class="nav-panel__header">
+        <p class="nav-panel__title">Navigation</p>
+        <button class="nav-panel__close" type="button" data-nav-close aria-label="Close navigation" autofocus>
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <a class="nav-panel__link" href="/research/" aria-current="page">Research</a>
+      <a class="nav-panel__link" href="/teaching/">Teaching</a>
+      <a class="nav-panel__link" href="/writing/">Writing</a>
+      <a class="nav-panel__link" href="/about/">About</a>
+    </div>
+  </dialog>
+</nav>
+
+</header>
+
+      <main id="main" class="site-main">
+        
+
+
+
+
+
+
+
+<article class="post-page">
+  <div class="content-column">
+    <header class="post-header">
+      <h1 class="post-title">How Can Thermodynamic Systems Be Composed?</h1>
+      <div class="post-meta">
+        
+          <time datetime="2022-07-25T00:00:00-07:00">July 25, 2022</time>
+        
+        
+        
+        
+          <span class="badge badge--status">Published</span>
+        
+      </div>
+    </header>
+
+    
+      <aside class="paper-ref paper-ref--published">
+        <p class="paper-ref__title">How to Apply Category Theory to Thermodynamics</p>
+        
+        
+          <a href="https://golem.ph.utexas.edu/category/2022/07/how_to_apply_category_theory_t.html" class="paper-ref__link" target="_blank" rel="noopener">Read the public post →</a>
+        
+      </aside>
+    
+
+    
+
+    <div class="post-body prose-flow">
+      <p>Thermodynamics began with engines. Nineteenth-century physicists wanted to understand how heat could be converted into work, and why every real engine loses some of its capacity to perform that conversion. The resulting theory introduced quantities such as temperature, energy, and entropy. It also revealed an unusual strength: thermodynamics can describe a system without tracking every molecule inside it.</p>
+
+<p>That economy is essential. A cup of water contains an astronomical number of molecules, each moving and colliding. Following all of them would be impossible, and usually unhelpful. Thermodynamics replaces that microscopic description with a small set of macroscopic variables. It tells us which states are possible, how states are related, and what constraints any transformation must obey.</p>
+
+<p>Yet one basic task remains surprisingly subtle. Scientists and engineers routinely assemble systems from parts. A heat engine contains reservoirs, pistons, and working fluids. A chemical process joins reaction vessels through pipes. If each component has a thermodynamic description, how should those descriptions combine into a description of the whole?</p>
+
+<p>This is where category theory enters. Category theory is a branch of mathematics concerned with structures and the relationships among them. Its language can feel abstract because it shifts attention away from what an object is made of and toward how objects connect. That shift is useful when composition itself is the subject.</p>
+
+<p>A category contains objects and arrows between them. An arrow can represent a function, a process, or a transformation, depending on the setting. The crucial operation is composition: when one arrow ends where another begins, they can be joined. Categories also require composition to be associative, so a chain of compatible processes has a consistent result regardless of how we group the intermediate steps.</p>
+
+<p>Those simple rules capture a discipline that is easy to lose in ordinary mathematical notation. If we claim to understand a large system by understanding its parts, then connecting the parts should be a well-defined operation. The description assigned to the composite should agree with the descriptions assigned to its components.</p>
+
+<p>In <em>Compositional Thermostatics</em>, John Baez, Owen Lynch, and Joe Moeller develop this perspective for equilibrium thermodynamics. Thermostatics concerns equilibrium states, where macroscopic quantities have settled into stable relationships. The framework treats systems as open: they have boundaries through which relevant quantities can be related to an environment or to another system.</p>
+
+<p>An open-system viewpoint changes the unit of analysis. A closed object can be studied in isolation, while an open object is partly characterized by its interface. The interface records how the object may connect to something else. Two systems can then be composed by identifying compatible boundary variables. Internal details of the connection recede, and the composite acquires a new external boundary.</p>
+
+<p>This resembles familiar practices in engineering. A circuit component may be represented by its terminals and the relationships among voltages and currents there. Once components are wired together, the joined terminals become internal and the remaining terminals describe the larger circuit. The category-theoretic goal is to make an analogous compositional logic precise for thermodynamic systems.</p>
+
+<p>Entropy plays a central role. In equilibrium thermodynamics, entropy helps characterize which macroscopic states a system can occupy and how combined systems settle. When systems are joined, their variables must satisfy compatibility conditions. A compositional framework tracks how the relevant state spaces and entropy functions behave under those identifications.</p>
+
+<p>The payoff is conceptual as well as technical. Classical presentations of thermodynamics often begin with a list of variables and laws, then apply them case by case. A compositional treatment asks which mathematical structures make the laws compatible with assembly. That question separates reusable principles from details belonging to one physical example.</p>
+
+<p>It also clarifies why category theory is more than decorative notation. The arrows and composition laws force us to specify what counts as a system, what information lives at its boundary, and what it means to connect two systems. If those choices are sound, calculations on components can be transported into calculations on networks of components.</p>
+
+<p>My public post develops these ideas selectively. It introduces parts of the compositional framework, pauses over details that I found especially illuminating, and then uses the framework to consider a quantum system. Quantum examples are valuable because they test how far thermodynamic structure can travel beyond the classical mechanical pictures that originally motivated the field.</p>
+
+<p>There are important limits to keep in view. An elegant compositional description does not eliminate the physical work of choosing the right variables or justifying an equilibrium approximation. A boundary model can omit effects that matter at another scale. Category theory organizes relationships once the objects and interfaces have been specified; it does not choose those objects automatically.</p>
+
+<p>The broader question is how much scientific reasoning can be made modular. Modern science studies systems that are too complicated to hold in one description, from coupled energy networks to biological organization. Compositional mathematics offers a way to ask whether local models can be joined without losing their meaning. Thermodynamics, with its long history of extracting reliable structure from hidden microscopic detail, is a natural place to find out.</p>
+
+<h2 id="further-reading">Further reading</h2>
+
+<ul>
+  <li><a href="https://golem.ph.utexas.edu/category/2022/07/how_to_apply_category_theory_t.html">Read my public post</a></li>
+  <li><a href="https://arxiv.org/abs/2111.10315">Read the arXiv record for <em>Compositional Thermostatics</em></a></li>
+</ul>
+
+    </div>
+
+    <nav class="back-link" aria-label="Back navigation">
+      <a href="/research/">← Back to Research</a>
+    </nav>
+  </div>
+</article>
+
+      </main>
+      <footer class="site-footer">
+  <div class="site-footer__links" aria-label="Footer links">
+    <a href="https://github.com/chadHarper" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.linkedin.com/in/chad-harper-91b785b9/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+  <p class="site-footer__copyright">© 2026 Chad Harper</p>
+</footer>
+
+    </div>
+    <script defer src="/assets/js/main.js"></script>
+  </body>
+</html>
