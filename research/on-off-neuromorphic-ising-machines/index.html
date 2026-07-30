@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ON-OFF neuromorphic ISING machines using Fowler-Nordheim annealers | Chad Harper</title>
-  <meta name="description" content="A guide to NeuroSA, an asynchronous neuromorphic architecture for simulated annealing on combinatorial optimization problems.">
+  <meta name="description" content="The published abstract for NeuroSA, a neuromorphic architecture for solving Ising problems.">
   <meta name="theme-color" content="#F5F0EB">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,20 +19,20 @@
 <meta property="og:title" content="ON-OFF neuromorphic ISING machines using Fowler-Nordheim annealers" />
 <meta name="author" content="Chad Harper" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="A guide to NeuroSA, an asynchronous neuromorphic architecture for simulated annealing on combinatorial optimization problems." />
-<meta name="twitter:description" property="og:description" content="A guide to NeuroSA, an asynchronous neuromorphic architecture for simulated annealing on combinatorial optimization problems." />
+<meta name="description" content="The published abstract for NeuroSA, a neuromorphic architecture for solving Ising problems." />
+<meta name="twitter:description" property="og:description" content="The published abstract for NeuroSA, a neuromorphic architecture for solving Ising problems." />
 <link rel="canonical" href="https://chadharper.github.io/research/on-off-neuromorphic-ising-machines/" />
 <meta property="og:url" content="https://chadharper.github.io/research/on-off-neuromorphic-ising-machines/" />
 <meta property="og:site_name" content="Chad Harper" />
 <meta property="og:image" content="https://chadharper.github.io/assets/img/headshot.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-07-26T15:52:23-07:00" />
-<meta property="article:modified_time" content="2026-07-26T15:52:23-07:00" />
+<meta property="article:published_time" content="2026-07-30T16:19:26-07:00" />
+<meta property="article:modified_time" content="2026-07-30T16:19:26-07:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://chadharper.github.io/assets/img/headshot.jpg" />
 <meta name="twitter:title" content="ON-OFF neuromorphic ISING machines using Fowler-Nordheim annealers" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Chad Harper"},"dateModified":"2026-07-26T15:52:23-07:00","datePublished":"2026-07-26T15:52:23-07:00","description":"A guide to NeuroSA, an asynchronous neuromorphic architecture for simulated annealing on combinatorial optimization problems.","headline":"ON-OFF neuromorphic ISING machines using Fowler-Nordheim annealers","image":"https://chadharper.github.io/assets/img/headshot.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://chadharper.github.io/research/on-off-neuromorphic-ising-machines/"},"url":"https://chadharper.github.io/research/on-off-neuromorphic-ising-machines/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Chad Harper"},"dateModified":"2026-07-30T16:19:26-07:00","datePublished":"2026-07-30T16:19:26-07:00","description":"The published abstract for NeuroSA, a neuromorphic architecture for solving Ising problems.","headline":"ON-OFF neuromorphic ISING machines using Fowler-Nordheim annealers","image":"https://chadharper.github.io/assets/img/headshot.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://chadharper.github.io/research/on-off-neuromorphic-ising-machines/"},"url":"https://chadharper.github.io/research/on-off-neuromorphic-ising-machines/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -131,38 +131,11 @@
     
 
     <div class="post-body prose-flow">
-      <p>Many computational problems are easy to state and hard to solve. Suppose a network must be divided into two groups while cutting as many connections as possible, or a set of mutually compatible choices must be selected from a much larger collection. A candidate answer can often be scored quickly. Finding the best answer may require searching through a number of possibilities that grows explosively with the size of the problem.</p>
+      
+        <h2>Abstract</h2>
+        <p>We introduce NeuroSA, a neuromorphic architecture specifically designed to ensure asymptotic convergence to the ground state of an Ising problem using a Fowler-Nordheim quantum mechanical tunneling based threshold-annealing process. The core component of NeuroSA consists of a pair of asynchronous ON-OFF neurons, which effectively map classical simulated annealing dynamics onto a network of integrate-and-fire neurons. The threshold of each ON-OFF neuron pair is adaptively adjusted by an FN annealer and the resulting spiking dynamics replicates the optimal escape mechanism and convergence of SA, particularly at low-temperatures. To validate the effectiveness of our neuromorphic Ising machine, we systematically solved benchmark combinatorial optimization problems such as MAX-CUT and Max Independent Set. Across multiple runs, NeuroSA consistently generates distribution of solutions that are concentrated around the state-of-the-art results (within 99%) or surpass the current state-of-the-art solutions for Max Independent Set benchmarks. Furthermore, NeuroSA is able to achieve these superior distributions without any graph-specific hyperparameter tuning. For practical illustration, we present results from an implementation of NeuroSA on the SpiNNaker2 platform, highlighting the feasibility of mapping our proposed architecture onto a standard neuromorphic accelerator platform.</p>
 
-<p>Statistical physics offers a useful picture of this search. In an Ising model, each variable acts like a tiny spin that can point in one of two directions. Interactions among spins assign an energy to every collective configuration. The lowest-energy configuration is the ground state. Many combinatorial optimization problems can be translated into this language so that a better solution corresponds to a lower energy.</p>
-
-<p>The difficulty is the landscape. An algorithm moving downhill can become trapped in a local minimum, a configuration better than its immediate neighbors yet worse than the best state elsewhere. Simulated annealing addresses this problem by borrowing another physical analogy. At high temperature, random fluctuations sometimes push the system uphill, helping it escape shallow traps. As the temperature falls, those excursions become less likely and the search settles.</p>
-
-<p>The cooling schedule matters. If the temperature falls too quickly, the search can freeze in a poor state. A classical result shows that sufficiently slow cooling can converge toward a global optimum under appropriate conditions, although the schedule may demand substantial time. Practical machines therefore face a tension among speed, solution quality, and the cost of producing controlled randomness.</p>
-
-<p>Our paper asks how this annealing logic can be expressed in a neuromorphic architecture. Neuromorphic systems communicate through discrete spikes and are designed to exploit distributed, event-driven computation. Their components update asynchronously rather than waiting for a single global clock. That makes them a promising match for searches in which many binary variables change locally over time.</p>
-
-<p>The architecture is called NeuroSA. Each optimization variable is represented by a pair of integrate-and-fire neurons, one labeled ON and the other OFF. A spike from one member of the pair records a transition of the corresponding binary state. Connections among neuron pairs encode the interaction matrix of the Ising problem. Because the updates occur through spikes, the network maps the acceptance dynamics of simulated annealing directly into asynchronous events.</p>
-
-<p>Annealing also requires a temperature-like control that changes over time. NeuroSA adjusts neuronal thresholds using a Fowler-Nordheim annealer. Fowler-Nordheim tunneling is a quantum-mechanical process in which electrons cross an energy barrier under a strong electric field. Previous device work showed that this process can produce a slowly decaying physical signal with the form needed for annealing. In the reported system, that behavior supplies the mathematical inspiration for the threshold schedule.</p>
-
-<p>The ON-OFF representation is important because spikes are transient. A conventional binary variable can simply remain in state zero or one. A spiking system instead needs events that indicate changes while preserving an interpretable state. Differential pairs provide that bookkeeping: activity in the ON neuron and OFF neuron represents opposite transitions, while their couplings enforce the optimization problem's energy relationships.</p>
-
-<p>We evaluated NeuroSA on two established classes of problems. MAX-CUT asks for a division of a graph's vertices that maximizes the weight of edges crossing between the two groups. Maximum Independent Set asks for the largest collection of vertices with no edges among them. Both have direct graph interpretations and can be written as quadratic binary optimization problems.</p>
-
-<p>On the reported benchmarks, NeuroSA produced solutions concentrated within 99 percent of the best known results, and on some Maximum Independent Set instances it exceeded the reported state of the art. The same general hyperparameter setting was used across graphs rather than being tuned separately for each one. That matters because extensive problem-specific tuning can hide part of an optimizer's practical cost.</p>
-
-<p>The work also mapped the architecture to SpiNNaker2, a many-core neuromorphic platform built for real-time spiking neural network workloads. This step tests whether the event-driven formulation can live on hardware designed around local memory and parallel spike processing. The paper reports time-to-solution and energy-to-solution advantages over a CPU implementation in the examined setting.</p>
-
-<p>The results carry qualifications. Large optimization problems still require storing and communicating many interactions, so memory mapping becomes a bottleneck as graphs scale. High-quality random variables can also consume significant energy. The Fowler-Nordheim behavior was digitally emulated on SpiNNaker2 because using the available physical device directly would have required high-precision conversion hardware. The paper therefore demonstrates the architecture and annealing dynamics rather than a fully integrated physical annealer.</p>
-
-<p>These limits point toward the central engineering question. An optimization method is valuable only when its algorithm, representation, noise source, memory system, and hardware timing work together. NeuroSA shows one way to align those layers around asynchronous simulated annealing. It also leaves room to investigate physical sources of randomness, more efficient mappings for sparse problems, and the tradeoff between the energy spent searching and the quality of the solution found.</p>
-
-<p>The broader lesson is that a metaphor from physics can become a computational architecture. Spins become paired spiking neurons, energy becomes synaptic interaction, and cooling becomes a changing threshold. Each translation must preserve the logic of the original search. When it does, neuromorphic hardware can participate in optimization as a physical, event-driven system rather than as a conventional processor simulating one.</p>
-
-<h2 id="paper">Paper</h2>
-
-<p><a href="/research/on-off-neuromorphic-ising-machines/pdf/">View the published paper in the site PDF reader</a></p>
-
+      
     </div>
 
     <nav class="back-link" aria-label="Back navigation">
