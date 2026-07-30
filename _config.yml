@@ -92,6 +92,7 @@ defaults:
       image: "/assets/img/headshot.jpg"
 
 exclude:
+  - explainer-drafts
   - Gemfile.lock
   - node_modules
   - scripts

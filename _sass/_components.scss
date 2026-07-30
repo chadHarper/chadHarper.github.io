@@ -533,6 +533,14 @@
   margin: $space-3 0 0;
 }
 
+.paper-card__abstract > p {
+  margin: 0;
+}
+
+.paper-card__abstract > p + p {
+  margin-top: $space-3;
+}
+
 .teaching-groups {
   display: grid;
   gap: $space-8;

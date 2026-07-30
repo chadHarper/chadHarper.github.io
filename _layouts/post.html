@@ -71,7 +71,12 @@ layout: default
     {% endif %}
 
     <div class="post-body prose-flow">
-      {{ content }}
+      {% if page.collection == 'papers' and page.hide_explainer and page.abstract %}
+        <h2>Abstract</h2>
+        {{ page.abstract | markdownify }}
+      {% else %}
+        {{ content }}
+      {% endif %}
     </div>
 
     <nav class="back-link" aria-label="Back navigation">
