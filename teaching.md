@@ -45,6 +45,7 @@ I currently teach physics at Laney College and mathematics at Mount Tamalpais Co
         <p class="teaching-course__number">PHYSICS 8A</p>
         <div class="teaching-course__body">
           <h3>Introductory Physics for Medical Students</h3>
+          <a class="teaching-course__link" href="https://undergraduate.catalog.berkeley.edu/courses/1184951/overview-aoYks" target="_blank" rel="noopener">Course website <span aria-hidden="true">↗</span></a>
         </div>
       </article>
     </div>
